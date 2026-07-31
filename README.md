@@ -1,3 +1,6 @@
+<img width="2048" height="1152" alt="DEM cover" src="https://github.com/user-attachments/assets/fb1af29b-2c73-45bc-96dc-10b4b9647aa4" />
+
+
 # DEUS EX MACHINA
 
 DEUS EX MACHINA (DEM) is a SillyTavern preset. It is designed to be a flexible preset focused on collaborative story writing that can seamlessly work for almost any card or scenario. It adapts dynamically to each scene without making the models get lost and still generating a workable result (dependent on the model's capabilities). DEM is focused on storytelling first and foremost. I believe this is the best approach when it comes to LLM text-generated fiction since literature is more prominent in the training data of most LLMs.
@@ -12,7 +15,7 @@ DEUS EX MACHINA (DEM) is a SillyTavern preset. It is designed to be a flexible p
 - [Scaffolding Thinking](#scaffolding-thinking)
 - [Model Quirks & Compatibility](#model-quirks--compatibility)
 - [Installation & Requirements](#installation--requirements)
-- [Integration With Summaryception](#integration-with-summaryception)
+- [Summaryception Integration](#summaryception-integration)
 - [License](#license)
 
 ## The Macro Engine
@@ -89,19 +92,57 @@ The Warning System is a macro engine warning system that tells the model to outp
 
 ## Core Pipeline
 
-These four create the core pipeline of DEUS EX MACHINA. TRUE THOUGHTS inject hidden (appear when you click to edit the response) or visible thoughts that emulate the psychological core of the characters. They add an extra realism layer. STATUS keeps track of characters on-scene and off-scene, including relationship, mental state, location, items, physical state, and clothes. These work independently of the setting. They allow the model to keep track of characters wherever they are, improving coherence and making the world still exist even in places you aren't.
+These four create the core pipeline of DEUS EX MACHINA. **TRUE THOUGHTS** inject hidden (appear when you click to edit the response) or visible thoughts that emulate the psychological core of the characters. They add an extra realism layer. **STATUS** keeps track of characters on-scene and off-scene, including relationship, mental state, location, items, physical state, and clothes. These work independently of the setting. They allow the model to keep track of characters wherever they are, improving coherence and making the world still exist even in places you aren't.
 
-MOMENTUM ENGINE defines four possible story routes at the end of every response. A true random route is chosen using a random regex macro injection hidden from you. The Momentum Engine Router applies it in the next turn or uses its fallback (in case you made an action that invalidated it), steering the whole response toward it. 
+**MOMENTUM ENGINE** defines four possible story routes at the end of every response. A true random route is chosen using a random regex macro injection hidden from you. The Momentum Engine Router applies it in the next turn or uses its fallback (in case you made an action that invalidated it), steering the whole response toward it. 
 
-STORY THREADS act as an outline or as a notepad for the model to easily go back to its observations about story development when it’s contextually relevant enough. Important story details are not forgotten. Momentum Engine connects to it, pulling those threads as the story advances.
+**STORY THREADS** act as an outline or as a notepad for the model to easily go back to its observations about story development when it’s contextually relevant enough. Important story details are not forgotten. Momentum Engine connects to it, pulling those threads as the story advances.
 
 True Thoughts and Status define fundamental character traits, Momentum Engine sets characters and events in motion, and Story Threads register unaddressed or possible events for later. Every module works together for the sake of storytelling.
+
+<figure>
+  <img width="1778" height="705" alt="1" src="https://github.com/user-attachments/assets/70c46b27-6d84-4104-a0da-87d5c5355804" />
+  <figcaption><em>Figure 1: GLM 5.2, default settings preset.</em></figcaption>
+</figure>
+
+<figure>
+  <img width="1703" height="547" alt="2" src="https://github.com/user-attachments/assets/925700eb-a192-4350-a0d3-9cf86a15e831" />
+  <figcaption><em>Figure 2: CYOA.</em></figcaption>
+</figure>
+
+<figure>
+  <img width="1698" height="639" alt="3" src="https://github.com/user-attachments/assets/27cbece4-9097-4011-a44b-3730fdd5d2d7" />
+  <figcaption><em>Figure 3: Status and Story Threads.</em></figcaption>
+</figure>
+
+<figure>
+  <img width="1698" height="564" alt="4" src="https://github.com/user-attachments/assets/18ab72b0-d9fd-4475-94e0-a2aa8f7cfab1" />
+  <figcaption><em>Figure 4: Momentum Engine.</em></figcaption>
+</figure>
+
+<figure>
+  <img width="1785" height="796" alt="5" src="https://github.com/user-attachments/assets/7083c410-4d01-4bac-aad0-8a98346f5490" />
+  <figcaption><em>Figure 5: GLM 5.2, third person {{user}} POV, asterisks, past-tense, Visual Storytelling, cinematic narration and heightened dialogue toggled on.</em></figcaption>
+</figure>
+
+<figure>
+<img width="1690" height="446" alt="6" src="https://github.com/user-attachments/assets/8363e645-448c-433e-a7f8-d1c9fba8b879" />
+  <figcaption><em>Figure 6: Second version of Story Threads (when Conflict instead of Momentum Engine is toggled on) and Conflict.</em></figcaption>
+</figure>
+
+<figure>
+  <img width="1685" height="803" alt="8" src="https://github.com/user-attachments/assets/1c718f5e-feda-4e6d-9608-5b30f688159f" />
+  <figcaption><em>Figure 7: Claude Opus 4.6, dry narration, lean dialogue, visible True Thoughts and Visual Storytelling toggled on. Azure theme.</em></figcaption>
+</figure>
 
 ## Scaffolding Thinking
 
 For models that accept custom Chain-of-Thought, enabling ! Thinking ! greatly improves the output. You get more coherence, stricter rule-following, better prose quality, and more adherence to formatting. There are also a lot of creative-focused steps, so it’s not only a checklist but a tool to increase creativity as well! ! Thinking ! is completely dynamic and contextual. It only enables a reasoning section for the modules you have enabled, so the total token count can get really small or really dense. But even at its maximum, reasoning still finishes in under a minute, and even under 30s in most cases, because the whole stepped CoT is laser-focused on very specific points.
 
-## MODEL QUIRKS & COMPATIBILITY
+<img width="1712" height="664" alt="7" src="https://github.com/user-attachments/assets/fc92e0d6-e453-4b56-ad0f-74a89d00b3f2" />
+
+
+## Model Quirks & Compatibility
 
 Here is a list of the models I’ve tested while creating the preset. It includes adherence to the instructions, recommended samplers, recommended post-processing, their quirks (that I’ve personally experienced, YMMV), and the recommended reasoning setting.
 
@@ -115,7 +156,7 @@ Here is a list of the models I’ve tested while creating the preset. It include
 | **MIXED: Deepseek V4 Pro (NanoGPT subscription, official provider)** | Adherence to the instructions: 70/100 | Post-processing: Merge all consecutive roles<br>Samplers: temperature - 0.75, Top P - 0.95, rest default or disabled. | Quirks: Inconsistent. Sometimes its outputs match GLM 5.2 and Opus 4.6, and sometimes it’s the worst of my testing. It can sometimes follow CoT perfectly, and sometimes it ignores everything. | ! Thinking ! module: enabled |
 | **MIXED: GLM 4.7 (NanoGPT subscription)** | Adherence to the instructions: 78/100 | Post-processing: Merge all consecutive roles<br>Samplers: temperature - 0.75, Top P - 0.95, rest default or disabled. | Quirks: A bit inconsistent. Sometimes fails to comply with instructions, but that’s uncommon enough. | ! Thinking ! module: enabled |
 
-## Installation and Requirements
+## Installation & Requirements
 
 ### Requirements
 
