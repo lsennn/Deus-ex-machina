@@ -30,7 +30,7 @@ DEUS EX MACHINA is a true modular preset. The reason why is that modular design 
 
 DEM at its default options sends approximately 4100 tokens. It’s not a lightweight preset, but it’s not wasteful either: every word is relevant. It’s written in a high-density syntax, compressed to the limits of English while still being entirely clear to the model. Because it is a modular preset, the token footprint can be reduced to under 1800 tokens while retaining a fully working and efficient core of instructions. At its absolute maximum, it sits at around 4700 tokens. The focus here was efficiency and coherence, not pure token count. A lot of different prompt techniques were used with the goal of helping prompt adherence: XML tagging, capitalization, trigger words, bullet points, pseudo-strings, clear wording, sending almost every instruction post-history, repeating “Instructions:”, giving a role to the model, and many other things.
 
-## THE MODULES
+## The Modules
 
 Every module has commentary inside. Open each of them in SillyTavern and read their contents for more information.
 
