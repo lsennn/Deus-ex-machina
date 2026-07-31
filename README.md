@@ -3,7 +3,7 @@
 
 # DEUS EX MACHINA
 
-DEUS EX MACHINA (DEM) is a SillyTavern preset. It is designed to be a flexible preset focused on collaborative story writing that can seamlessly work for almost any card or scenario. It adapts dynamically to each scene without making the models get lost and still generating a workable result (dependent on the model's capabilities). DEM is focused on storytelling first and foremost. I believe this is the best approach when it comes to LLM text-generated fiction since literature is more prominent in the training data of most LLMs.
+DEUS EX MACHINA (DEM) is a [SillyTavern](https://github.com/SillyTavern/SillyTavern) preset. It is designed to be a flexible preset focused on collaborative story writing that can seamlessly work for almost any card or scenario. It adapts dynamically to each scene without making the models get lost and still generating a workable result (dependent on the model's capabilities). DEM is focused on storytelling first and foremost. I believe this is the best approach when it comes to LLM text-generated fiction since literature is more prominent in the training data of most LLMs.
 
 ## Contents
 
