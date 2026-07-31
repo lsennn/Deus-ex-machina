@@ -20,7 +20,7 @@ DEUS EX MACHINA (DEM) is a [SillyTavern](https://github.com/SillyTavern/SillyTav
 
 ## The Macro Engine
 
-DEM relies heavily on SillyTavern’s macro engine. It’s a powerful tool that lets you use deterministic traits in prompting (basically programming logic and exact outcomes instead of pure probabilities). That whole workflow enabled by the macros is the core of DEM, so it’s as easy as pressing a button to change the behavior of the preset completely in a dynamic fashion without you ever worrying about conflicting instructions. For example, if you enable both past and present tense options, it will default to present tense to avoid conflicts. It will also do that for every option and conflicting module across the preset.
+DEM relies heavily on SillyTavern’s [macro engine](https://docs.sillytavern.app/usage/core-concepts/macros/). It’s a powerful tool that lets you use deterministic traits in prompting (basically programming logic and exact outcomes instead of pure probabilities). That whole workflow enabled by the macros is the core of DEM, so it’s as easy as pressing a button to change the behavior of the preset completely in a dynamic fashion without you ever worrying about conflicting instructions. For example, if you enable both past and present tense options, it will default to present tense to avoid conflicts. It will also do that for every option and conflicting module across the preset.
 
 ## True Modular Design
 
