@@ -125,7 +125,7 @@ Here is a list of the models I’ve tested while creating the preset. It include
 
 ### Install
 
-1. Download [`DEUS EX MACHINA V1.json`](/DEUS-EX-MACHINA-V1) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V1.json`](/DEUS-EX-MACHINA-V1.json) from the repository or the releases page.
 2. In SillyTavern, click the plug icon on the top bar.
 3. Select **Chat Completion** under API.
 4. Click the leftmost icon on the top bar.
