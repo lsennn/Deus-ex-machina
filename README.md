@@ -36,11 +36,11 @@ Every module has commentary inside. Open each of them in SillyTavern and read th
 
 ### Core
 
-Sets up the macro system and the preset framing. Essential to keep enabled and in order, except for maybe System Policies, which can be disabled if your model is already very dark leaning and doesn’t send out refusals.
+Sets up the macro system and the preset framing. Essential to keep enabled and in order, except for **System Policies**, which may be disabled if your model is already very dark leaning and doesn’t send out refusals.
 
 ### Story
 
-{{User}} agency means you control {{user}}. CYOA features choose-your-own-adventure options where the model will write and act out your decisions and dialogue according to your choices. Director mode means you’re the director. Your messages serve as input, and the story is built to match them. In this mode, the model will write and act for you.
+{{User}} agency means you control {{user}}. **CYOA** features choose-your-own-adventure options where the model will write and act out your decisions and dialogue according to your choices. **Director** state means you’re the director. Your messages serve as input, and the story is built to match them. In this mode, the model will write and act for you.
 
 ### Characters and plot guidance
 
@@ -48,47 +48,49 @@ Will take care of character portrayal and plot progression.
 
 ### Narration and dialogue
 
-Will define the prose style. They are written to try and reduce slop at its root and offer different flavors while at it. For narration: Cinematic is the default, offering a balance between literary and dry. Literary is the most flavorful and stylized. Dry cuts off all similes and metaphors. As for dialogue: Naturalistic is the default pick - realistic, lifelike. Lean offers precise, carefully chosen and not too prominent dialogue. Heightened shapes dialogue to a more present, intense and longer fashion.
+Will define the prose style. They are written to try and reduce slop at its root and offer different flavors while at it. For narration: **Cinematic** is the default, offering a balance between literary and dry. **Literary** is the most flavorful and stylized. **Dry** cuts off all similes and metaphors. As for dialogue: **Naturalistic** is the default pick - realistic, lifelike. **Lean** offers precise, carefully chosen and not too prominent dialogue. **Heightened** shapes dialogue to a more present, intense and longer fashion.
 
 ### Adult options
 
-Each has their own flavor: one is more realistic, and the other is more fantastical and absolutely horny. Both options are disabled by default.
+Each has their own flavor: one is more realistic, and the other is more fantastical and absolutely unrestrained. Both options are disabled by default.
 
 ### Length
 
-Lets you define the range of the responses’ length. Flexible is the default, but there are also short, medium and large, all dynamically adapting scene-to-scene to the defined range instead of a fixed value all the time.
+Lets you define the range of the responses’ length. **Flexible** is the default, but there are also **short, medium and long**, all dynamically adapting scene-to-scene to the defined range instead of a fixed value all the time.
 
 ### Visuals
 
-Dialogue Color defines a color for each character and is enabled by default. Visual Storytelling creates HTML and CSS elements that help tell the story instead of just being fluff.
+**Dialogue Color** defines a color for each character and is enabled by default. **Visual Storytelling** creates HTML and CSS elements that help tell the story instead of just being fluff.
 
 ### Formatting
 
-You can define a lot of different formatting options in wildly different and experimental combinations. It’s very fun to try it all out when you’re bored. You can choose the Character POV, {{User}} POV, asterisks usage, tense and between visible, hidden and no True Thoughts. No asterisks, 3rd person character POV, hidden True Thoughts, 2nd person {{user}} POV, and present tense are the default picks. All formatting options are consolidated and enforced through Prose Formatting, so keep it enabled.
+You can define a lot of different formatting options in wildly different and experimental combinations. You can choose the **Character POV, {{User}} POV, asterisks usage, tense** and between visible, hidden and no **True Thoughts**. No asterisks, 3rd person character POV, hidden True Thoughts, 2nd person {{user}} POV, and present tense are the default picks. All formatting options are consolidated and enforced through Prose Formatting, so keep it enabled.
 
 ### Constraints
 
-Helps steer the models away from annoying and story-damaging patterns. They are Character Realism, Anti-Character Omniscience, Anti-Positivity Bias, Anti-Repetition, and Ban-List. They don’t solve every problem, though, as they are mitigation tools. You can’t really control LLMs completely.
+Helps steer the models away from annoying and story-damaging patterns. They are **Character Realism, Anti-Character Omniscience, Anti-Positivity Bias, Anti-Repetition, and Ban-List**. They don’t solve every problem, as they are mitigation tools. You can’t really control LLMs completely.
 
 ### Add-Ons
 
-Status, Momentum Engine, Story Threads, and Tracker (tracks time, date, location, and weather). There is also Conflict, which is disabled by default. It is an alternative version of Momentum Engine that uses fewer tokens and has a slower pace, but it still keeps the story moving with its conflict building instructions output that gets fed back to the LLM in a loop. All add-ons have UIs through regex, so make sure to have them all active if they fit your taste.
+**Status, Momentum Engine, Story Threads**(explained later with more details) and **Tracker** (tracks time, date, location, and weather). There is also **Conflict**, which is disabled by default. It is an alternative version of Momentum Engine that uses fewer tokens and has a slower pace, but it still keeps the story moving with its conflict building instructions output that gets fed back to the LLM in a loop. All add-ons have UIs through regex, so make sure to have them all active if they fit your taste. 
+> [!NOTE]
+> UIs created through DEM's regex set don't send out HTML/CSS tokens to the LLM, they alter the UI display only. Raw input stays simple and token-efficient. Regexes are also used to clean the context after a certain depth (2-6) from old add-ons and HTML formatting, keeping them in the context only as necessary for consistency reasons and story progression.
 
 ### System Utility
 
-Momentum Engine Router is the second phase of Momentum Engine. Structure dynamically consolidates the structure of the output according to the modules you have enabled (keep Structure enabled!).
+**Momentum Engine Router** is the second phase of Momentum Engine. Structure dynamically consolidates the structure of the output according to the modules you have enabled (keep Structure enabled!).
 
 ### User Utility
 
-Post-History Instructions is for when the card you’re using injects instructions, enable if you want that. Force Formatting brute-forces selected options when models are stubborn. Force Language is for when you want your responses to be in a language other than English. Custom OOC sends user instructions in a more consistent manner. Hard Jailbreak is for when the model is consistently refusing, though it is overkill for most models (but may work for Mimo).
+**Post-History Instructions** is for when the card you’re using injects instructions, enable if you want that behavior. **Force Formatting** brute-forces selected options when models are stubborn. **Force Language** may be enabled when you want your responses to be in a language other than English. **Custom OOC** sends user instructions in a more consistent manner. **Hard Jailbreak** can be used when the model is consistently refusing, though it is overkill for most models (but may work for Mimo).
 
 ### Reasoning
 
-Thinking is enabled by default. Anti-Overthink is an attempt at making models like Kimi think less. It has mixed results depending on the provider and time of day. Kimi is really resistant to listening to instructions that try to modify its CoT.
+Thinking is enabled by default. **Anti-Overthink** is an attempt at making models like Kimi think less. It has mixed results depending on the provider and time of day. Kimi is really resistant to listening to instructions that try to modify its CoT.
 
 ### Danger Zone
 
-The Warning System is a macro engine warning system that tells the model to output warnings in the responses if something is misconfigured. You can safely disable it if you’re intentionally using a configuration that triggers it. Otherwise, keep it enabled.
+The **Warning System** is a macro engine warning system that tells the model to output warnings in the responses if something is misconfigured. You can safely disable it if you’re intentionally using a configuration that triggers it. Otherwise, keep it enabled.
 
 ## Core Pipeline
 
@@ -160,7 +162,8 @@ Here is a list of the models I’ve tested while creating the preset. It include
 6. Choose the downloaded preset file.
 7. When SillyTavern asks whether to allow embedded regex scripts, click **Yes**.
 
-The regexes are required. If you clicked **No**, re-import the preset and allow them.
+> [!IMPORTANT]
+> The regexes are required. If you clicked **No**, re-import the preset and allow them.
 
 ## Summaryception Integration
 
