@@ -133,9 +133,9 @@ For models that accept custom Chain-of-Thought, enabling `! Thinking !` greatly 
 
 ## Model Quirks & Compatibility
 
-Here is a list of the models I’ve tested while creating the preset. It includes adherence to the instructions, recommended samplers, recommended post-processing, their quirks (varies from user to user, personal experience reported), and the recommended reasoning setting.
+Here is a list of the models I’ve tested while creating the preset. It includes model rating using DEM, recommended samplers, recommended post-processing, their quirks (varies from user to user, personal experience reported), and the recommended reasoning setting.
 
-| Model | Adherence | Samplers | Notes | Thinking |
+| Model | Model rating using DEM | Samplers | Notes | Thinking |
 | --- | ---: | --- | --- | --- |
 | **RECOMMENDED: GLM 5.2 (NanoGPT subscription)** | 90/100 | Post-processing: Merge all consecutive roles<br>Samplers: temperature - 0.75, Top P - 0.95, rest default or disabled. | Quirks: Needs ! Force Formatting ! sometimes when it comes to forcing present-tense after a past tense greeting. | ! Thinking ! module: enabled |
 | **RECOMMENDED: Claude Opus 4.6 (Claude Code)** | 91/100 | Post-processing: Merge all consecutive roles<br>Samplers: temperature - 1.0, Top P - 0.95, rest default or disabled. | Quirks: Prose style is a bit harder to steer. It does what it wants or what it thinks is best sometimes, but it usually doesn't give bad results. | ! Thinking ! module: enabled |
