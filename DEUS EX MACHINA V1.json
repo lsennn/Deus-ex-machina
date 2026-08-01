@@ -1,4 +1,433 @@
 {
+    "extensions": {
+        "regex_scripts": [
+            {
+                "id": "7be09711-4a82-4635-9ef4-5de5509e7f67",
+                "scriptName": "DEM - Remove older @Conflict from context",
+                "findRegex": "/<conflict\\b[^>]*>[\\s\\S]*?<\\/conflict>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 4,
+                "maxDepth": null
+            },
+            {
+                "id": "f49c991e-4cf4-4db8-a862-a296125848cc",
+                "scriptName": "DEM - Remove older @Momentum Engine from context",
+                "findRegex": "/<momentum\\b[^>]*>[\\s\\S]*?<\\/momentum>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null
+            },
+            {
+                "id": "71f0e5b8-9513-4aac-8e63-56582279befc",
+                "scriptName": "DEM - Remove older @Visual Storytelling styles from context",
+                "findRegex": "/<style\\b[^>]*>[\\s\\S]*?<\\/style>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null
+            },
+            {
+                "id": "75bf5197-a878-45c5-b6ee-67dc0f74b2e9",
+                "scriptName": "DEM - Remove horizontal rule",
+                "findRegex": "/^---\\s*$/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "d711c848-58a2-4dba-95f6-8cae5290f9f1",
+                "scriptName": "DEM - Remove older @CYOA from context",
+                "findRegex": "/<cyoa>[\\s\\S]*?<\\/cyoa>\\n?/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null
+            },
+            {
+                "id": "d6ed8d89-91ba-4c7e-a5e9-3a514a05e9e9",
+                "scriptName": "DEM - Remove older @Status from context",
+                "findRegex": "/<status\\b[^>]*>[\\s\\S]*?<\\/status>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 6,
+                "maxDepth": null
+            },
+            {
+                "id": "2e066f02-63e6-44a6-9a52-ed2191ea5e0f",
+                "scriptName": "DEM - Remove older @Story Threads from context",
+                "findRegex": "/<threads\\b[^>]*>[\\s\\S]*?<\\/threads>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 6,
+                "maxDepth": null
+            },
+            {
+                "id": "1ed4a0d8-1f3d-4d1b-9cf5-625d55f62842",
+                "scriptName": "DEM - Remove older @Dialogue Color from context",
+                "findRegex": "/<font\\b[^>]*\\bcolor\\s*=\\s*(?:\"([^\"]+)\"|'([^']+)'|([^\\s>]+))[^>]*>([\\s\\S]*?)<\\/font\\s*>/gi",
+                "replaceString": "$1$2$3 $4",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 6,
+                "maxDepth": null
+            },
+            {
+                "id": "62d9b4de-89e1-4af2-ac87-5a69f948bd0a",
+                "scriptName": "DEM - Hide @True Thoughts",
+                "findRegex": "/<true_thoughts\\b[^>]*>[\\s\\S]*?<\\/true_thoughts>\\s*/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "51d87b9e-a447-46e8-98cb-d2103825f1c7",
+                "scriptName": "DEM - Normalize @Momentum Engine numbering",
+                "findRegex": "/(<momentum\\s*>\\s*<summary\\b[^>]*>\\s*(?:(?:⚔️|⚡)\\s*)?\\*\\*Momentum Engine\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*\\*\\*Current tension:\\*\\*[\\s\\S]*?\\*\\*Potential developments:\\*\\*)\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)(\\s*(?:(?:<momentum_route\\b[^>]*(?:\\/>|>[\\s\\S]*?<\\/momentum_route>)|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]>)\\s*)?<\\/details>\\s*<\\/momentum\\s*>)/gim",
+                "replaceString": "$1\n1. $2\n2. $3\n3. $4\n4. $5$6",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "e8d4d6af-ae80-4bd0-8287-29ca8995cadf",
+                "scriptName": "DEM - Seal @Momentum Engine route",
+                "findRegex": "/(<momentum\\b[^>]*>[\\s\\S]*?<details\\b[^>]*>)((?:(?!<momentum_route\\b)[\\s\\S])*?)(?:<momentum_route\\b[^>]*(?:\\/>|>[\\s\\S]*?<\\/momentum_route>)\\s*|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]\\s*>\\s*)?(<\\/details>\\s*<\\/momentum\\s*>)/gi",
+                "replaceString": "$1$2\n{{random::<momentum_route primary=\"1\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"1\" fallback=\"3\"></momentum_route>::<momentum_route primary=\"1\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"3\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"3\"></momentum_route>}}\n$3",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "7d864648-1b97-4122-a33c-c8806af11f07",
+                "scriptName": "DEM - @Tracker UI",
+                "findRegex": "/<tracker\\b[^>]*>\\s*\\[?\\s*(\\S+)\\s+([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*(?:(\\S+)\\s+)?([^,]+),\\s*(-?\\d+(?:\\.\\d+)?)°([CF])\\s*\\]?\\s*<\\/tracker\\s*>/gim",
+                "replaceString": "<style>\n.dem-track{--dem-accent:#94e2d5;display:flex;align-items:center;flex-wrap:wrap;gap:2px 14px;padding:8px 10px;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-track__item{display:flex;align-items:center;gap:8px;min-width:0;padding:4px 2px;line-height:1.4;}\n.dem-track__item--time{flex:0 1 auto;}\n.dem-track__item--date{flex:0 1 auto;}\n.dem-track__item--location{flex:0 1 auto;}\n.dem-track__item--weather{flex:0 1 auto;}\n.dem-track__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;flex:0 0 24px;background:color-mix(in srgb,var(--dem-item-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-item-accent) 30%,transparent);}\n.dem-track__value{min-width:0;color:color-mix(in srgb,var(--dem-item-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-variant-numeric:tabular-nums;font-weight:700;overflow-wrap:anywhere;}\n.dem-track__temp{flex:0 0 auto;font-variant-numeric:tabular-nums;font-weight:700;color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));background:color-mix(in srgb,#f9e2af 12%,transparent);border:1px solid color-mix(in srgb,#f9e2af 28%,transparent);border-radius:5px;padding:1px 7px;font-size:.9em;}\n@media (hover:hover){.dem-track:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(30,30,46,.35));}}\n@media (max-width:520px){.dem-track{gap:2px 8px}.dem-track__item{flex-basis:100%;}.dem-track__item--time{flex-basis:auto;}}\n@media (prefers-reduced-motion:reduce){.dem-track{transition:none;}}\n</style>\n<div class=\"dem-track\">\n  <div class=\"dem-track__item dem-track__item--time\" style=\"--dem-item-accent:#94e2d5\"><span class=\"dem-track__icon\">$1</span><span class=\"dem-track__value\">$2</span></div>\n  <div class=\"dem-track__item dem-track__item--date\" style=\"--dem-item-accent:#b4befe\"><span class=\"dem-track__icon\">🗓️</span><span class=\"dem-track__value\">$3</span></div>\n  <div class=\"dem-track__item dem-track__item--location\" style=\"--dem-item-accent:#cba6f7\"><span class=\"dem-track__icon\">📍</span><span class=\"dem-track__value\">$4</span></div>\n  <div class=\"dem-track__item dem-track__item--weather\" style=\"--dem-item-accent:#f5c2e7\"><span class=\"dem-track__icon\">$5</span><span class=\"dem-track__value\">$6</span><span class=\"dem-track__temp\">$7°$8</span></div>\n</div>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "b50e17f1-5ecb-43f6-bf57-ddeef9b8fc1c",
+                "scriptName": "DEM - @Tracker UI (recovery)",
+                "findRegex": "/<tracker\\b[^>]*>\\s*\\[?\\s*(\\S+)\\s+((?:pre-?dawn|dawn|morning|noon|afternoon|evening|dusk|night|late\\s+night))\\s*\\|?\\s*((?=[^<]*(?:→|->))[^<]*?),\\s*(-?\\d+(?:\\.\\d+)?)°([CF])\\s*\\]?\\s*<\\/tracker\\s*>/gim",
+                "replaceString": "<style>\n.dem-track-recovery{--dem-accent:#94e2d5;display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;padding:8px 10px;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);}\n.dem-track-recovery__item{display:flex;align-items:center;gap:8px;min-width:0;padding:4px 2px;line-height:1.4;}\n.dem-track-recovery__item--context{flex:1 1 260px;}\n.dem-track-recovery__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;flex:0 0 24px;background:color-mix(in srgb,var(--dem-item-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-item-accent) 30%,transparent);}\n.dem-track-recovery__value{min-width:0;color:color-mix(in srgb,var(--dem-item-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-variant-numeric:tabular-nums;font-weight:700;overflow-wrap:anywhere;}\n.dem-track-recovery__temp{flex:0 0 auto;font-variant-numeric:tabular-nums;font-weight:700;color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));background:color-mix(in srgb,#f9e2af 12%,transparent);border:1px solid color-mix(in srgb,#f9e2af 28%,transparent);border-radius:5px;padding:1px 7px;font-size:.9em;}\n@media (max-width:520px){.dem-track-recovery__item--context{flex-basis:100%;}}\n</style>\n<div class=\"dem-track-recovery\">\n  <div class=\"dem-track-recovery__item\" style=\"--dem-item-accent:#94e2d5\"><span class=\"dem-track-recovery__icon\">$1</span><span class=\"dem-track-recovery__value\">$2</span></div>\n  <div class=\"dem-track-recovery__item dem-track-recovery__item--context\" style=\"--dem-item-accent:#cba6f7\"><span class=\"dem-track-recovery__icon\">🧭</span><span class=\"dem-track-recovery__value\">$3</span></div>\n  <div class=\"dem-track-recovery__item\" style=\"--dem-item-accent:#f9e2af\"><span class=\"dem-track-recovery__temp\">$4°$5</span></div>\n</div>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "3fe8f199-c17b-4812-aa8a-6294eea1244d",
+                "scriptName": "DEM - @CYOA UI",
+                "findRegex": "/<cyoa>[\\s\\S]*?\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n?\\s*<\\/cyoa>/gi",
+                "replaceString": "<style>\n.dem-card{--dem-accent:#fab387;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-card__body{padding:8px 10px 10px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-cyoa__hint{font-weight:600;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 76%,transparent);font-size:.85em;margin:2px 2px 8px;}\n.dem-choice{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;padding:8px 10px;border-radius:6px;margin-top:6px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);transition:background .15s ease,border-color .15s ease;}\n.dem-choice__num{width:22px;height:22px;border-radius:5px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 28%,transparent);display:flex;align-items:center;justify-content:center;font-size:.8em;font-weight:700;color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));margin-top:1px;}\n.dem-choice__content{min-width:0;line-height:1.5;overflow-wrap:anywhere;}\n.dem-choice__category{display:inline-block;font-size:.68em;font-weight:700;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-right:7px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));border:1px solid color-mix(in srgb,var(--dem-accent) 24%,transparent);vertical-align:middle;}\n.dem-choice__title{font-weight:700;margin-right:4px;vertical-align:middle;}\n.dem-choice__text{color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 82%,transparent);font-size:.94em;vertical-align:middle;}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-choice:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-choice{padding:8px}.dem-choice__category{display:table;margin-bottom:3px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-choice{transition:none;}}\n</style>\n<details open class=\"dem-card dem-cyoa\">\n  <summary><span class=\"dem-card__icon\">🎯</span><span class=\"dem-card__title\">Your Choices</span><span class=\"dem-card__tag\">Decide</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-card__body\">\n    <div class=\"dem-cyoa__hint\">Choose one, combine options, or type your own.</div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">1</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$1</span><span class=\"dem-choice__title\">$2:</span><span class=\"dem-choice__text\">$3</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">2</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$4</span><span class=\"dem-choice__title\">$5:</span><span class=\"dem-choice__text\">$6</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">3</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$7</span><span class=\"dem-choice__title\">$8:</span><span class=\"dem-choice__text\">$9</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">4</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$10</span><span class=\"dem-choice__title\">$11:</span><span class=\"dem-choice__text\">$12</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">5</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$13</span><span class=\"dem-choice__title\">$14:</span><span class=\"dem-choice__text\">$15</span></div></div>\n  </div>\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "8821ac4d-354c-4e85-9d5f-82702ac82fbd",
+                "scriptName": "DEM - @Status UI",
+                "findRegex": "/<status\\b[^>]*>\\s*<summary\\b[^>]*>\\s*(?:(?:📊\\s*)?\\*\\*Status\\*\\*\\s*\\n?)?([\\s\\S]*?)<\\/summary>\\s*(?:<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>)?\\s*<\\/status\\s*>/gim",
+                "replaceString": "<style>\n.dem-card{--dem-accent:#89b4fa;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible,.dem-status__more>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret,.dem-status__more[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-status__body,.dem-status__offscene{padding:8px 10px 4px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-status__more{border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-status__more>summary{list-style:none;cursor:pointer;padding:8px 12px;display:flex;align-items:center;gap:8px;color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-size:.78em;font-weight:700;text-transform:uppercase;transition:background .15s ease;}\n.dem-status__more>summary::-webkit-details-marker{display:none;}\n.dem-status__offscene{border-top:1px solid var(--SmartThemeBorderColor,#313244);background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 84%,var(--SmartThemeBodyColor,#cdd6f4) 4%);}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-status__more>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-status__body,.dem-status__offscene{padding-inline:8px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-status__more>summary{transition:none;}}\n</style>\n<details open class=\"dem-card dem-status\">\n  <summary><span class=\"dem-card__icon\">📊</span><span class=\"dem-card__title\">Status</span><span class=\"dem-card__tag\">Live</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-status__body\">$1</div>\n  <details class=\"dem-status__more\">\n    <summary><span class=\"dem-card__caret\">▸</span>Other Characters</summary>\n    <div class=\"dem-status__offscene\">$2</div>\n  </details>\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "0c447ced-0fc1-4711-8920-ccfd14dd207e",
+                "scriptName": "DEM - @Story Threads UI",
+                "findRegex": "/(?:<threads\\b[^>]*>\\s*)?<summary\\b[^>]*>\\s*(?:(?:🧵|🧶)\\s*)?\\*\\*Story Threads\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>\\s*(?:<\\/threads\\s*>)?/gim",
+                "replaceString": "<style>\n.dem-card{--dem-accent:#cba6f7;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-threads__body{padding:10px 12px;border-top:1px solid var(--SmartThemeBorderColor,#313244);line-height:1.7;white-space:pre-line;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 84%,transparent);overflow-wrap:anywhere;}\n.dem-thread-tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:.78em;font-weight:700;line-height:1.45;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 88%,transparent);border:1px solid var(--dem-thread-color);background:color-mix(in srgb,var(--dem-thread-color) 16%,transparent);vertical-align:baseline;}\n.dem-thread-tag--current{--dem-thread-color:#a6e3a1}.dem-thread-tag--unresolved{--dem-thread-color:#f9e2af}.dem-thread-tag--possible{--dem-thread-color:#89b4fa}.dem-thread-tag--seed{--dem-thread-color:#cba6f7}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-threads__body{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret{transition:none;}}\n</style>\n<details class=\"dem-card dem-threads\">\n  <summary><span class=\"dem-card__icon\">🧶</span><span class=\"dem-card__title\">Story Threads</span><span class=\"dem-card__tag\">Lore</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-threads__body\">$1</div>\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "d43f98c6-6e35-4d65-9599-b7a8f749df48",
+                "scriptName": "DEM - @Momentum Engine UI",
+                "findRegex": "/<momentum\\b[^>]*>\\s*<summary\\b[^>]*>\\s*(?:(?:⚔️|⚡)\\s*)?\\*\\*Momentum Engine\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*\\*\\*Current tension:\\*\\*\\s*([\\s\\S]*?)\\s*\\*\\*Potential developments:\\*\\*\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*(?:<momentum_route\\s+primary=[\"'][1-4][\"']\\s+fallback=[\"'][1-4][\"']\\s*>\\s*<\\/momentum_route>|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]\\s*>)\\s*<\\/details>\\s*<\\/momentum\\s*>/gim",
+                "replaceString": "<style>\n.dem-card{--dem-accent:#f9e2af;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-momentum-engine__body{padding:10px 12px 12px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-momentum-engine__label{display:block;margin-bottom:4px;font-size:.7em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--dem-accent) 76%,var(--SmartThemeBodyColor,#cdd6f4));}\n.dem-momentum-engine__tension{line-height:1.55;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 86%,transparent);overflow-wrap:anywhere;}\n.dem-momentum-engine__notice{margin-top:10px;padding:7px 9px;border:1px solid color-mix(in srgb,var(--dem-accent) 24%,var(--SmartThemeBorderColor,#313244));border-radius:6px;background:color-mix(in srgb,var(--dem-accent) 7%,transparent);font-size:.82em;line-height:1.45;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 72%,transparent);overflow-wrap:anywhere;}\n.dem-momentum-engine__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px;}\n.dem-momentum-branch{display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;align-items:start;padding:8px 9px;border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);line-height:1.45;overflow-wrap:anywhere;transition:background .15s ease,border-color .15s ease;}\n.dem-momentum-branch__num{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:5px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 28%,transparent);font-size:.8em;font-weight:700;color:color-mix(in srgb,var(--dem-accent) 76%,var(--SmartThemeBodyColor,#cdd6f4));}\n.dem-momentum-branch__title{display:block;font-weight:700;color:var(--SmartThemeBodyColor,#cdd6f4);}\n.dem-momentum-branch__text{display:block;margin-top:2px;font-size:.94em;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 80%,transparent);}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-momentum-branch:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:560px){.dem-momentum-engine__grid{grid-template-columns:1fr;}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-momentum-engine__body{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-momentum-branch{transition:none;}}\n</style>\n<details class=\"dem-card dem-momentum-engine\">\n  <summary><span class=\"dem-card__icon\">⚡</span><span class=\"dem-card__title\">Momentum Engine</span><span class=\"dem-card__tag\">Route computed</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-momentum-engine__body\">\n    <div class=\"dem-momentum-engine__tension\"><span class=\"dem-momentum-engine__label\">Current tension</span>$1</div>\n    <div class=\"dem-momentum-engine__notice\">A hidden story route was randomly selected. These are not choices for you; it will guide the next response.</div>\n    <div class=\"dem-momentum-engine__grid\">\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">1</span><span><span class=\"dem-momentum-branch__title\">$2</span><span class=\"dem-momentum-branch__text\">$3</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">2</span><span><span class=\"dem-momentum-branch__title\">$4</span><span class=\"dem-momentum-branch__text\">$5</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">3</span><span><span class=\"dem-momentum-branch__title\">$6</span><span class=\"dem-momentum-branch__text\">$7</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">4</span><span><span class=\"dem-momentum-branch__title\">$8</span><span class=\"dem-momentum-branch__text\">$9</span></span></div>\n    </div>\n  </div>\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "750f3969-3516-4143-8a3c-d3188403aefd",
+                "scriptName": "DEM - @Conflict UI",
+                "findRegex": "/<conflict\\s*>\\s*<summary\\b[^>]*>\\s*(?:⚔️\\s*)?\\*\\*Conflict\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>\\s*<\\/conflict\\s*>/gim",
+                "replaceString": "<style>\n.dem-card{--dem-accent:#f38ba8;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-conflict-legacy>summary{border-bottom:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-conflict-legacy>p:not(:empty),.dem-conflict-legacy>ul,.dem-conflict-legacy>ol,.dem-conflict-legacy>blockquote{margin:0;padding:10px 12px;line-height:1.65;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 84%,transparent);overflow-wrap:anywhere;}\n.dem-conflict-legacy>p:empty{display:none;}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-conflict-legacy>p:not(:empty),.dem-conflict-legacy>ul,.dem-conflict-legacy>ol,.dem-conflict-legacy>blockquote{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret{transition:none;}}\n</style>\n<details class=\"dem-card dem-conflict dem-conflict-legacy\">\n  <summary><span class=\"dem-card__icon\">⚔️</span><span class=\"dem-card__title\">Conflict</span><span class=\"dem-card__tag\">Active</span><span class=\"dem-card__caret\">▸</span></summary>\n\n$1\n\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "66c3595e-0779-4dd6-a4d6-99af91469ede",
+                "scriptName": "DEM - UI module accents",
+                "findRegex": "/(?=<details(?:\\s+open)?\\s+class=\"dem-card\\s+dem-(?:cyoa|status|threads|conflict|momentum-engine)\">)/i",
+                "replaceString": "<style>.dem-card.dem-cyoa{--dem-accent:#fab387}.dem-card.dem-status{--dem-accent:#89b4fa}.dem-card.dem-threads{--dem-accent:#cba6f7}.dem-card.dem-conflict{--dem-accent:#f38ba8}.dem-card.dem-momentum-engine{--dem-accent:#f9e2af}.dem-status__more:has(.dem-status__offscene:empty){display:none}</style>\n",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "b1b0ea73-9450-4505-94d2-334f5467b422",
+                "scriptName": "DEM - [Current] tag appearance ",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Current\\]/gm",
+                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--current\">Current</span>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c2fef43c-53b6-4700-9c4e-26d0f4527a18",
+                "scriptName": "DEM - [Unresolved] tag appearance",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Unresolved\\]/gm",
+                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--unresolved\">Unresolved</span>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "92afc933-3ee5-4b1c-81bb-0d4e5118e8f7",
+                "scriptName": "DEM - [Possible] tag appearance ",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Possible\\]/gm",
+                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--possible\">Possible</span>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "7d6b4f7b-539a-4d84-b03d-e2eb1c7c8f91",
+                "scriptName": "DEM - [Seed] tag appearance",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Seed\\]/gm",
+                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--seed\">Seed</span>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c3703be8-98b3-4b9d-91b3-92e0852b5430",
+                "scriptName": "DEM - @Status UI - Char. w/ relationship",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[?\\s*([^|\\r\\n]+?)\\s*\\|\\s*Physical:\\s*([^|\\r\\n]*)\\s*\\|\\s*Clothes:\\s*([^|\\r\\n]*)\\s*\\|\\s*Mental:\\s*([^|\\r\\n]*)\\s*\\|\\s*Location:\\s*([^|\\r\\n]*)\\s*\\|\\s*Relationship(?:\\s*\\(mutual with [^)\\r\\n]+\\))?:\\s*\\[?\\s*((?:100|[1-9]?\\d)\\/100)\\s*\\]?\\s*-\\s*([^|\\r\\n]*)\\s*\\|\\s*Inventory:\\s*([^|\\]<\\r\\n]*)\\s*\\]?[ \\t]*(?=$|<\\/div>)/gim",
+                "replaceString": "<div class=\"dem-status-row\" style=\"display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;margin:0 0 6px;padding:8px 10px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;font-size:.9em;line-height:1.45;overflow-wrap:anywhere;\"><strong style=\"flex:1 0 100%;color:color-mix(in srgb,#cba6f7 74%,var(--SmartThemeBodyColor,#cdd6f4));\">$1</strong><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f38ba8 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Physical</span><span>$2</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Clothes</span><span>$3</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#a6e3a1 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Mental</span><span>$4</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#89b4fa 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Location</span><span>$5</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#fab387 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Relationship</span><span style=\"padding:0 5px;border-radius:4px;background:color-mix(in srgb,#fab387 14%,transparent);border:1px solid color-mix(in srgb,#fab387 28%,transparent);font-variant-numeric:tabular-nums;\">$6</span><span>$7</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#94e2d5 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Inventory</span><span>$8</span></span></div>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "9fff3360-9bb4-4fec-881e-8efe0e2e64b2",
+                "scriptName": "DEM - @Status UI - {{user}}",
+                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[?\\s*([^|\\r\\n]+?)\\s*\\|\\s*(?:Physical:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Clothes:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Mental:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Location:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Inventory:\\s*)?([^|\\]<\\r\\n]*)\\s*\\]?[ \\t]*(?=$|<\\/div>)/gim",
+                "replaceString": "<div class=\"dem-status-row\" style=\"display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;margin:0 0 6px;padding:8px 10px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;font-size:.9em;line-height:1.45;overflow-wrap:anywhere;\"><strong style=\"flex:1 0 100%;color:color-mix(in srgb,#cba6f7 74%,var(--SmartThemeBodyColor,#cdd6f4));\">$1</strong><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f38ba8 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Physical</span><span>$2</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Clothes</span><span>$3</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#a6e3a1 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Mental</span><span>$4</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#89b4fa 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Location</span><span>$5</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#94e2d5 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Inventory</span><span>$6</span></span></div>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            }
+        ]
+    },
     "temperature": 0.75,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -1067,7 +1496,7 @@
             "marker": false,
             "name": "! Thinking !",
             "role": "user",
-            "content": "{{// Comment: Enabled by default. Builds a reasoning scaffold around your active modules, greatly improving instruction following and coherence. Disable it for Gemini, Gemma 4 31B, and Kimi models. Recommended for GLM, DeepSeek, and Claude (Opus 4.6 and earlier). Results vary with other models, so test what works best. Pick one option under Reasoning}}{{trim}}\n\n{{#if !.pick_reasoning}}{{.pick_reasoning = thinking}}{{.thinking = on}}{{#if !.structure}}{{.order_error_final = on}}{{/if}}{{#if .momentum_engine}}{{#if !.momentum_engine_router}}{{.order_error_final = on}}{{/if}}{{/if}}{{trim}}\n<CoT_scheme>\n@CoT\nInstructions:\n- Privately decide each applicable step once, in order. Be concrete; never merely confirm compliance, draft, or reveal reasoning. Follow EXACTLY:\n<think>\n{{#if .cyoa}}- **@CYOA:** (FIRST identify {{user}}'s latest choice, combination, custom action, or none; apply before planning)\n{{/if}}- **Context:** (subtext, continuity, logic, sheet, {{user}}, world)\n- **OOC:** (address direct OOC instructions; otherwise skip)\n- **Knowledge:** (if multidisciplinary){{#if .momentum_engine}}\n- **@Momentum Engine Apply:** (APPLY NOW: name prior sealed Primary/Fallback or none; apply it){{/if}}{{#if .anti_positivity}}\n- **@Anti-Positivity Bias:** (apply){{/if}}{{#if .anti_omniscience}}\n- **@Anti-Character Omniscience:** (apply){{/if}}{{#if .character_realism}}\n- **@Character Realism:** (apply){{/if}}{{#if .smut_mxl}}\n(Unless context forbids, prioritize erotic escalation when characters are alone, intimate, or charged)\n- **Erotic potential:** (hottest plausible, character/world-consistent escalation)\n- **Erotic state:** (arousal, response, desire, wants versus admissions)\n- **@Smut guidance:** (responsiveness, dirty talk, language, positions, kinks, sensation){{else}}{{#if .smut}}\n- **@Smut:** (apply guidance through physical/emotional state and unhurried escalation){{/if}}{{/if}}{{#if .story_threads}}{{#if .momentum_engine}}\n- **Story progression:** (advance pressure; connect one coherent @Story Threads hook){{else}}{{#if .tension}}\n- **Story progression:** (draw a relevant @Story Threads hook into @Conflict){{else}}\n- **Story progression:** (advance one @Story Threads hook through @Plot Guidance){{/if}}{{/if}}{{else}}{{#if .momentum_engine}}\n- **Story progression:** (advance current pressure){{else}}{{#if .tension}}\n- **Story progression:** (advance via @Conflict/current pressure){{else}}\n- **Story progression:** (choose next coherent beat via @Plot Guidance){{/if}}{{/if}}{{/if}}\n- **@Prose Response Length:** (words + paragraphs){{#if .language}}\n- @Language: output solely in {{.language}}{{/if}}\n- **@Narration (creative):** (voice, lens, imagery, blocking, texture, pacing, interiority; no format)\n- **@Dialogue (creative):** (selected style){{#if .dialogue_colors}}\n- **@Dialogue Color:** (reuse defined HTML colors; otherwise choose suitable ones){{/if}}{{#if .true_thoughts}}\n- **@True Thoughts:** (open with one block per non-{{user}} character reacting to {{user}}'s turn; add more{{#if .true_thoughts_visible}}; match dialogue colors{{/if}}){{/if}}{{#if .visual_storytelling}}\n- **@Visual Storytelling:** (story element, HTML/CSS, placement, intensity, interaction, responsive state, fresh grammar){{/if}}{{#if .tracker}}\n- **@Tracker:** (carry four fields; update supported changes){{/if}}{{#if .anti_repetition}}{{#if !.director_state}}{{#if !.cyoa}}\n- **@Anti-Repetition:** (Reaction to {{user}}'s dialogue: use fresh diction WITHOUT quotation, distinctive-word uptake, action recap, characters repeating or rephrasing it){{/if}}{{/if}}{{/if}}\n- **Prose plan:** (map concrete adaptive beats in `<prose>` to a natural stop: actions, dialogue, reveals, details; summarize, never draft){{#if .status}}\n- **@Status:** (create/update footer data){{/if}}{{#if .momentum_engine}}{{#if .director_state}}\n- **@Momentum Engine Plan:** (list and plan all routes; {{user}}, non-{{user}} characters, or external events MAY initiate them){{else}}{{#if .cyoa}}\n- **@Momentum Engine Plan:** (list and plan all routes; {{user}}, non-{{user}} characters, or external events MAY initiate them){{else}}\n- **@Momentum Engine Plan:** (list and plan all routes, initiated ONLY by non-{{user}} characters or external events; NEVER by {{user}}){{/if}}{{/if}}{{/if}}\n- **@Prose Formatting**: (list and apply all rules)\nLet's write.\n</think>\n</CoT_scheme>{{/if}}",
+            "content": "{{// Comment: Enabled by default. Builds a reasoning scaffold around your active modules, greatly improving instruction following and coherence. Disable it for Gemini, Gemma 4 31B, and Kimi models. Recommended for GLM, DeepSeek, and Claude (Opus 4.6 and earlier). Results vary with other models, so test what works best. Pick one option under Reasoning}}{{trim}}\n\n{{#if !.pick_reasoning}}{{.pick_reasoning = thinking}}{{.thinking = on}}{{#if !.structure}}{{.order_error_final = on}}{{/if}}{{#if .momentum_engine}}{{#if !.momentum_engine_router}}{{.order_error_final = on}}{{/if}}{{/if}}{{trim}}\n<CoT_scheme>\n@CoT\nInstructions:\n- Privately decide each applicable step once, in order. Be concrete; never merely confirm compliance, draft, or reveal reasoning. Follow EXACTLY:\n<think>\n{{#if .cyoa}}- **@CYOA:** (FIRST identify {{user}}'s latest choice, combination, custom action, or none; apply before planning)\n{{/if}}- **Context:** (subtext, continuity, logic, sheet, {{user}}, world)\n- **OOC:** (address direct OOC instructions; otherwise skip)\n- **Knowledge:** (if multidisciplinary){{#if .momentum_engine}}\n- **@Momentum Engine Apply:** (APPLY NOW: name prior sealed Primary/Fallback or none; apply it){{/if}}{{#if .anti_positivity}}\n- **@Anti-Positivity Bias:** (apply){{/if}}{{#if .anti_omniscience}}\n- **@Anti-Character Omniscience:** (apply){{/if}}{{#if .character_realism}}\n- **@Character Realism:** (apply){{/if}}{{#if .smut_mxl}}\n(Unless context forbids, prioritize erotic escalation when characters are alone, intimate, or charged)\n- **Erotic potential:** (hottest plausible, character/world-consistent escalation)\n- **Erotic state:** (arousal, response, desire, wants versus admissions)\n- **@Smut guidance:** (responsiveness, dirty talk, language, positions, kinks, sensation){{else}}{{#if .smut}}\n- **@Smut:** (apply guidance through physical/emotional state and unhurried escalation){{/if}}{{/if}}{{#if .story_threads}}{{#if .momentum_engine}}\n- **Story progression:** (advance pressure; connect one coherent @Story Threads hook){{else}}{{#if .tension}}\n- **Story progression:** (draw a relevant @Story Threads hook into @Conflict){{else}}\n- **Story progression:** (advance one @Story Threads hook through @Plot Guidance){{/if}}{{/if}}{{else}}{{#if .momentum_engine}}\n- **Story progression:** (advance current pressure){{else}}{{#if .tension}}\n- **Story progression:** (advance via @Conflict/current pressure){{else}}\n- **Story progression:** (choose next coherent beat via @Plot Guidance){{/if}}{{/if}}{{/if}}\n- **@Prose Response Length:** (words + paragraphs){{#if .language}}\n- @Language: output solely in {{.language}}{{/if}}\n- **@Narration (creative):** (voice, lens, imagery, blocking, texture, pacing, interiority; no format)\n- **@Dialogue (creative):** (selected style){{#if .dialogue_colors}}\n- **@Dialogue Color:** (reuse defined HTML colors; otherwise choose suitable ones){{/if}}{{#if .true_thoughts}}\n- **@True Thoughts:** (open with one block per non-{{user}} character reacting to {{user}}'s turn; add more{{#if .true_thoughts_visible}}; match dialogue colors{{/if}}){{/if}}{{#if .visual_storytelling}}\n- **@Visual Storytelling:** (story element, HTML/CSS, placement, intensity, interaction, responsive state, fresh grammar){{/if}}{{#if .tracker}}\n- **@Tracker:** (carry four fields; update supported changes){{/if}}{{#if .anti_repetition}}{{#if !.director_state}}{{#if !.cyoa}}\n- **@Anti-Repetition:** (Reaction to {{user}}'s dialogue: use fresh diction WITHOUT quotation, distinctive-word uptake, action recap, characters repeating or rephrasing it){{/if}}{{/if}}{{/if}}\n- **Prose plan:** (map concrete adaptive beats in `<prose>` to a natural stop: actions, dialogue, reveals, details; summarize, never draft){{#if .status}}\n- **@Status:** (create/update footer data){{/if}}{{#if .momentum_engine}}{{#if .director_state}}\n- **@Momentum Engine Plan:** (LIST and plan all routes; {{user}}, non-{{user}} characters, or external events MAY initiate them){{else}}{{#if .cyoa}}\n- **@Momentum Engine Plan:** (LIST and plan all routes; {{user}}, non-{{user}} characters, or external events MAY initiate them){{else}}\n- **@Momentum Engine Plan:** (LIST and plan all routes, initiated ONLY by non-{{user}} characters or external events; NEVER by {{user}}){{/if}}{{/if}}{{/if}}\n- **@Prose Formatting**: (list and apply all rules)\nLet's write.\n</think>\n</CoT_scheme>{{/if}}",
             "injection_position": 0,
             "injection_depth": 0,
             "injection_order": 100,
@@ -1850,434 +2279,5 @@
     "n": 1,
     "request_images": false,
     "request_image_aspect_ratio": "",
-    "request_image_resolution": "",
-    "extensions": {
-        "regex_scripts": [
-            {
-                "id": "7be09711-4a82-4635-9ef4-5de5509e7f67",
-                "scriptName": "DEM - Remove older @Conflict from context",
-                "findRegex": "/<conflict\\b[^>]*>[\\s\\S]*?<\\/conflict>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 4,
-                "maxDepth": null
-            },
-            {
-                "id": "f49c991e-4cf4-4db8-a862-a296125848cc",
-                "scriptName": "DEM - Remove older @Momentum Engine from context",
-                "findRegex": "/<momentum\\b[^>]*>[\\s\\S]*?<\\/momentum>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null
-            },
-            {
-                "id": "71f0e5b8-9513-4aac-8e63-56582279befc",
-                "scriptName": "DEM - Remove older @Visual Storytelling styles from context",
-                "findRegex": "/<style\\b[^>]*>[\\s\\S]*?<\\/style>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null
-            },
-            {
-                "id": "75bf5197-a878-45c5-b6ee-67dc0f74b2e9",
-                "scriptName": "DEM - Remove horizontal rule",
-                "findRegex": "/^---\\s*$/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "d711c848-58a2-4dba-95f6-8cae5290f9f1",
-                "scriptName": "DEM - Remove older @CYOA from context",
-                "findRegex": "/<cyoa>[\\s\\S]*?<\\/cyoa>\\n?/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null
-            },
-            {
-                "id": "d6ed8d89-91ba-4c7e-a5e9-3a514a05e9e9",
-                "scriptName": "DEM - Remove older @Status from context",
-                "findRegex": "/<status\\b[^>]*>[\\s\\S]*?<\\/status>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 6,
-                "maxDepth": null
-            },
-            {
-                "id": "2e066f02-63e6-44a6-9a52-ed2191ea5e0f",
-                "scriptName": "DEM - Remove older @Story Threads from context",
-                "findRegex": "/<threads\\b[^>]*>[\\s\\S]*?<\\/threads>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 6,
-                "maxDepth": null
-            },
-            {
-                "id": "1ed4a0d8-1f3d-4d1b-9cf5-625d55f62842",
-                "scriptName": "DEM - Remove older @Dialogue Color from context",
-                "findRegex": "/<font\\b[^>]*\\bcolor\\s*=\\s*(?:\"([^\"]+)\"|'([^']+)'|([^\\s>]+))[^>]*>([\\s\\S]*?)<\\/font\\s*>/gi",
-                "replaceString": "$1$2$3 $4",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 6,
-                "maxDepth": null
-            },
-            {
-                "id": "62d9b4de-89e1-4af2-ac87-5a69f948bd0a",
-                "scriptName": "DEM - Hide @True Thoughts",
-                "findRegex": "/<true_thoughts\\b[^>]*>[\\s\\S]*?<\\/true_thoughts>\\s*/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "51d87b9e-a447-46e8-98cb-d2103825f1c7",
-                "scriptName": "DEM - Normalize @Momentum Engine numbering",
-                "findRegex": "/(<momentum\\s*>\\s*<summary\\b[^>]*>\\s*(?:(?:⚔️|⚡)\\s*)?\\*\\*Momentum Engine\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*\\*\\*Current tension:\\*\\*[\\s\\S]*?\\*\\*Potential developments:\\*\\*)\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)\\r?\\n\\s*\\d+\\.\\s*(\\*\\*[^*\\r\\n]+?:\\*\\*\\s*[^\\r\\n]+)(\\s*(?:(?:<momentum_route\\b[^>]*(?:\\/>|>[\\s\\S]*?<\\/momentum_route>)|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]>)\\s*)?<\\/details>\\s*<\\/momentum\\s*>)/gim",
-                "replaceString": "$1\n1. $2\n2. $3\n3. $4\n4. $5$6",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": false,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "e8d4d6af-ae80-4bd0-8287-29ca8995cadf",
-                "scriptName": "DEM - Seal @Momentum Engine route",
-                "findRegex": "/(<momentum\\b[^>]*>[\\s\\S]*?<details\\b[^>]*>)((?:(?!<momentum_route\\b)[\\s\\S])*?)(?:<momentum_route\\b[^>]*(?:\\/>|>[\\s\\S]*?<\\/momentum_route>)\\s*|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]\\s*>\\s*)?(<\\/details>\\s*<\\/momentum\\s*>)/gi",
-                "replaceString": "$1$2\n{{random::<momentum_route primary=\"1\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"1\" fallback=\"3\"></momentum_route>::<momentum_route primary=\"1\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"3\"></momentum_route>::<momentum_route primary=\"2\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"3\" fallback=\"4\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"1\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"2\"></momentum_route>::<momentum_route primary=\"4\" fallback=\"3\"></momentum_route>}}\n$3",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": false,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "7d864648-1b97-4122-a33c-c8806af11f07",
-                "scriptName": "DEM - @Tracker UI",
-                "findRegex": "/<tracker\\b[^>]*>\\s*\\[?\\s*(\\S+)\\s+([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*(?:(\\S+)\\s+)?([^,]+),\\s*(-?\\d+(?:\\.\\d+)?)°([CF])\\s*\\]?\\s*<\\/tracker\\s*>/gim",
-                "replaceString": "<style>\n.dem-track{--dem-accent:#94e2d5;display:flex;align-items:center;flex-wrap:wrap;gap:2px 14px;padding:8px 10px;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-track__item{display:flex;align-items:center;gap:8px;min-width:0;padding:4px 2px;line-height:1.4;}\n.dem-track__item--time{flex:0 1 auto;}\n.dem-track__item--date{flex:0 1 auto;}\n.dem-track__item--location{flex:0 1 auto;}\n.dem-track__item--weather{flex:0 1 auto;}\n.dem-track__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;flex:0 0 24px;background:color-mix(in srgb,var(--dem-item-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-item-accent) 30%,transparent);}\n.dem-track__value{min-width:0;color:color-mix(in srgb,var(--dem-item-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-variant-numeric:tabular-nums;font-weight:700;overflow-wrap:anywhere;}\n.dem-track__temp{flex:0 0 auto;font-variant-numeric:tabular-nums;font-weight:700;color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));background:color-mix(in srgb,#f9e2af 12%,transparent);border:1px solid color-mix(in srgb,#f9e2af 28%,transparent);border-radius:5px;padding:1px 7px;font-size:.9em;}\n@media (hover:hover){.dem-track:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(30,30,46,.35));}}\n@media (max-width:520px){.dem-track{gap:2px 8px}.dem-track__item{flex-basis:100%;}.dem-track__item--time{flex-basis:auto;}}\n@media (prefers-reduced-motion:reduce){.dem-track{transition:none;}}\n</style>\n<div class=\"dem-track\">\n  <div class=\"dem-track__item dem-track__item--time\" style=\"--dem-item-accent:#94e2d5\"><span class=\"dem-track__icon\">$1</span><span class=\"dem-track__value\">$2</span></div>\n  <div class=\"dem-track__item dem-track__item--date\" style=\"--dem-item-accent:#b4befe\"><span class=\"dem-track__icon\">🗓️</span><span class=\"dem-track__value\">$3</span></div>\n  <div class=\"dem-track__item dem-track__item--location\" style=\"--dem-item-accent:#cba6f7\"><span class=\"dem-track__icon\">📍</span><span class=\"dem-track__value\">$4</span></div>\n  <div class=\"dem-track__item dem-track__item--weather\" style=\"--dem-item-accent:#f5c2e7\"><span class=\"dem-track__icon\">$5</span><span class=\"dem-track__value\">$6</span><span class=\"dem-track__temp\">$7°$8</span></div>\n</div>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "b50e17f1-5ecb-43f6-bf57-ddeef9b8fc1c",
-                "scriptName": "DEM - @Tracker UI (recovery)",
-                "findRegex": "/<tracker\\b[^>]*>\\s*\\[?\\s*(\\S+)\\s+((?:pre-?dawn|dawn|morning|noon|afternoon|evening|dusk|night|late\\s+night))\\s*\\|?\\s*((?=[^<]*(?:→|->))[^<]*?),\\s*(-?\\d+(?:\\.\\d+)?)°([CF])\\s*\\]?\\s*<\\/tracker\\s*>/gim",
-                "replaceString": "<style>\n.dem-track-recovery{--dem-accent:#94e2d5;display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;padding:8px 10px;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);}\n.dem-track-recovery__item{display:flex;align-items:center;gap:8px;min-width:0;padding:4px 2px;line-height:1.4;}\n.dem-track-recovery__item--context{flex:1 1 260px;}\n.dem-track-recovery__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;flex:0 0 24px;background:color-mix(in srgb,var(--dem-item-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-item-accent) 30%,transparent);}\n.dem-track-recovery__value{min-width:0;color:color-mix(in srgb,var(--dem-item-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-variant-numeric:tabular-nums;font-weight:700;overflow-wrap:anywhere;}\n.dem-track-recovery__temp{flex:0 0 auto;font-variant-numeric:tabular-nums;font-weight:700;color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));background:color-mix(in srgb,#f9e2af 12%,transparent);border:1px solid color-mix(in srgb,#f9e2af 28%,transparent);border-radius:5px;padding:1px 7px;font-size:.9em;}\n@media (max-width:520px){.dem-track-recovery__item--context{flex-basis:100%;}}\n</style>\n<div class=\"dem-track-recovery\">\n  <div class=\"dem-track-recovery__item\" style=\"--dem-item-accent:#94e2d5\"><span class=\"dem-track-recovery__icon\">$1</span><span class=\"dem-track-recovery__value\">$2</span></div>\n  <div class=\"dem-track-recovery__item dem-track-recovery__item--context\" style=\"--dem-item-accent:#cba6f7\"><span class=\"dem-track-recovery__icon\">🧭</span><span class=\"dem-track-recovery__value\">$3</span></div>\n  <div class=\"dem-track-recovery__item\" style=\"--dem-item-accent:#f9e2af\"><span class=\"dem-track-recovery__temp\">$4°$5</span></div>\n</div>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "3fe8f199-c17b-4812-aa8a-6294eea1244d",
-                "scriptName": "DEM - @CYOA UI",
-                "findRegex": "/<cyoa>[\\s\\S]*?\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n\\s*\\d+\\.\\s*\\[([^\\]]*)\\]\\s*\\*\\*(.*?)\\s*:\\*\\*\\s*([^\\n]*)\\s*\\n?\\s*<\\/cyoa>/gi",
-                "replaceString": "<style>\n.dem-card{--dem-accent:#fab387;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-card__body{padding:8px 10px 10px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-cyoa__hint{font-weight:600;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 76%,transparent);font-size:.85em;margin:2px 2px 8px;}\n.dem-choice{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;padding:8px 10px;border-radius:6px;margin-top:6px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);transition:background .15s ease,border-color .15s ease;}\n.dem-choice__num{width:22px;height:22px;border-radius:5px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 28%,transparent);display:flex;align-items:center;justify-content:center;font-size:.8em;font-weight:700;color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));margin-top:1px;}\n.dem-choice__content{min-width:0;line-height:1.5;overflow-wrap:anywhere;}\n.dem-choice__category{display:inline-block;font-size:.68em;font-weight:700;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-right:7px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));border:1px solid color-mix(in srgb,var(--dem-accent) 24%,transparent);vertical-align:middle;}\n.dem-choice__title{font-weight:700;margin-right:4px;vertical-align:middle;}\n.dem-choice__text{color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 82%,transparent);font-size:.94em;vertical-align:middle;}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-choice:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-choice{padding:8px}.dem-choice__category{display:table;margin-bottom:3px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-choice{transition:none;}}\n</style>\n<details open class=\"dem-card dem-cyoa\">\n  <summary><span class=\"dem-card__icon\">🎯</span><span class=\"dem-card__title\">Your Choices</span><span class=\"dem-card__tag\">Decide</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-card__body\">\n    <div class=\"dem-cyoa__hint\">Choose one, combine options, or type your own.</div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">1</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$1</span><span class=\"dem-choice__title\">$2:</span><span class=\"dem-choice__text\">$3</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">2</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$4</span><span class=\"dem-choice__title\">$5:</span><span class=\"dem-choice__text\">$6</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">3</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$7</span><span class=\"dem-choice__title\">$8:</span><span class=\"dem-choice__text\">$9</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">4</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$10</span><span class=\"dem-choice__title\">$11:</span><span class=\"dem-choice__text\">$12</span></div></div>\n    <div class=\"dem-choice\"><div class=\"dem-choice__num\">5</div><div class=\"dem-choice__content\"><span class=\"dem-choice__category\">$13</span><span class=\"dem-choice__title\">$14:</span><span class=\"dem-choice__text\">$15</span></div></div>\n  </div>\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "8821ac4d-354c-4e85-9d5f-82702ac82fbd",
-                "scriptName": "DEM - @Status UI",
-                "findRegex": "/<status\\b[^>]*>\\s*<summary\\b[^>]*>\\s*(?:(?:📊\\s*)?\\*\\*Status\\*\\*\\s*\\n?)?([\\s\\S]*?)<\\/summary>\\s*(?:<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>)?\\s*<\\/status\\s*>/gim",
-                "replaceString": "<style>\n.dem-card{--dem-accent:#89b4fa;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible,.dem-status__more>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret,.dem-status__more[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-status__body,.dem-status__offscene{padding:8px 10px 4px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-status__more{border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-status__more>summary{list-style:none;cursor:pointer;padding:8px 12px;display:flex;align-items:center;gap:8px;color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));font-size:.78em;font-weight:700;text-transform:uppercase;transition:background .15s ease;}\n.dem-status__more>summary::-webkit-details-marker{display:none;}\n.dem-status__offscene{border-top:1px solid var(--SmartThemeBorderColor,#313244);background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 84%,var(--SmartThemeBodyColor,#cdd6f4) 4%);}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-status__more>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-status__body,.dem-status__offscene{padding-inline:8px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-status__more>summary{transition:none;}}\n</style>\n<details open class=\"dem-card dem-status\">\n  <summary><span class=\"dem-card__icon\">📊</span><span class=\"dem-card__title\">Status</span><span class=\"dem-card__tag\">Live</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-status__body\">$1</div>\n  <details class=\"dem-status__more\">\n    <summary><span class=\"dem-card__caret\">▸</span>Other Characters</summary>\n    <div class=\"dem-status__offscene\">$2</div>\n  </details>\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "0c447ced-0fc1-4711-8920-ccfd14dd207e",
-                "scriptName": "DEM - @Story Threads UI",
-                "findRegex": "/(?:<threads\\b[^>]*>\\s*)?<summary\\b[^>]*>\\s*(?:(?:🧵|🧶)\\s*)?\\*\\*Story Threads\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>\\s*(?:<\\/threads\\s*>)?/gim",
-                "replaceString": "<style>\n.dem-card{--dem-accent:#cba6f7;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-threads__body{padding:10px 12px;border-top:1px solid var(--SmartThemeBorderColor,#313244);line-height:1.7;white-space:pre-line;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 84%,transparent);overflow-wrap:anywhere;}\n.dem-thread-tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:.78em;font-weight:700;line-height:1.45;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 88%,transparent);border:1px solid var(--dem-thread-color);background:color-mix(in srgb,var(--dem-thread-color) 16%,transparent);vertical-align:baseline;}\n.dem-thread-tag--current{--dem-thread-color:#a6e3a1}.dem-thread-tag--unresolved{--dem-thread-color:#f9e2af}.dem-thread-tag--possible{--dem-thread-color:#89b4fa}.dem-thread-tag--seed{--dem-thread-color:#cba6f7}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-threads__body{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret{transition:none;}}\n</style>\n<details class=\"dem-card dem-threads\">\n  <summary><span class=\"dem-card__icon\">🧶</span><span class=\"dem-card__title\">Story Threads</span><span class=\"dem-card__tag\">Lore</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-threads__body\">$1</div>\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "d43f98c6-6e35-4d65-9599-b7a8f749df48",
-                "scriptName": "DEM - @Momentum Engine UI",
-                "findRegex": "/<momentum\\b[^>]*>\\s*<summary\\b[^>]*>\\s*(?:(?:⚔️|⚡)\\s*)?\\*\\*Momentum Engine\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*\\*\\*Current tension:\\*\\*\\s*([\\s\\S]*?)\\s*\\*\\*Potential developments:\\*\\*\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*\\d+\\.\\s*\\*\\*([^*\\r\\n]+?):\\*\\*\\s*([^\\r\\n]+)\\s*(?:<momentum_route\\s+primary=[\"'][1-4][\"']\\s+fallback=[\"'][1-4][\"']\\s*>\\s*<\\/momentum_route>|<Momentum Engine:\\s*Primary\\s*#[1-4]\\s*\\|\\s*Fallback\\s*#[1-4]\\s*>)\\s*<\\/details>\\s*<\\/momentum\\s*>/gim",
-                "replaceString": "<style>\n.dem-card{--dem-accent:#f9e2af;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-momentum-engine__body{padding:10px 12px 12px;border-top:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-momentum-engine__label{display:block;margin-bottom:4px;font-size:.7em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--dem-accent) 76%,var(--SmartThemeBodyColor,#cdd6f4));}\n.dem-momentum-engine__tension{line-height:1.55;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 86%,transparent);overflow-wrap:anywhere;}\n.dem-momentum-engine__notice{margin-top:10px;padding:7px 9px;border:1px solid color-mix(in srgb,var(--dem-accent) 24%,var(--SmartThemeBorderColor,#313244));border-radius:6px;background:color-mix(in srgb,var(--dem-accent) 7%,transparent);font-size:.82em;line-height:1.45;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 72%,transparent);overflow-wrap:anywhere;}\n.dem-momentum-engine__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px;}\n.dem-momentum-branch{display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;align-items:start;padding:8px 9px;border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);line-height:1.45;overflow-wrap:anywhere;transition:background .15s ease,border-color .15s ease;}\n.dem-momentum-branch__num{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:5px;background:color-mix(in srgb,var(--dem-accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 28%,transparent);font-size:.8em;font-weight:700;color:color-mix(in srgb,var(--dem-accent) 76%,var(--SmartThemeBodyColor,#cdd6f4));}\n.dem-momentum-branch__title{display:block;font-weight:700;color:var(--SmartThemeBodyColor,#cdd6f4);}\n.dem-momentum-branch__text{display:block;margin-top:2px;font-size:.94em;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 80%,transparent);}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover,.dem-momentum-branch:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:560px){.dem-momentum-engine__grid{grid-template-columns:1fr;}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-momentum-engine__body{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret,.dem-momentum-branch{transition:none;}}\n</style>\n<details class=\"dem-card dem-momentum-engine\">\n  <summary><span class=\"dem-card__icon\">⚡</span><span class=\"dem-card__title\">Momentum Engine</span><span class=\"dem-card__tag\">Route computed</span><span class=\"dem-card__caret\">▸</span></summary>\n  <div class=\"dem-momentum-engine__body\">\n    <div class=\"dem-momentum-engine__tension\"><span class=\"dem-momentum-engine__label\">Current tension</span>$1</div>\n    <div class=\"dem-momentum-engine__notice\">A hidden story route was randomly selected. These are not choices for you; it will guide the next response.</div>\n    <div class=\"dem-momentum-engine__grid\">\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">1</span><span><span class=\"dem-momentum-branch__title\">$2</span><span class=\"dem-momentum-branch__text\">$3</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">2</span><span><span class=\"dem-momentum-branch__title\">$4</span><span class=\"dem-momentum-branch__text\">$5</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">3</span><span><span class=\"dem-momentum-branch__title\">$6</span><span class=\"dem-momentum-branch__text\">$7</span></span></div>\n      <div class=\"dem-momentum-branch\"><span class=\"dem-momentum-branch__num\">4</span><span><span class=\"dem-momentum-branch__title\">$8</span><span class=\"dem-momentum-branch__text\">$9</span></span></div>\n    </div>\n  </div>\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "750f3969-3516-4143-8a3c-d3188403aefd",
-                "scriptName": "DEM - @Conflict UI",
-                "findRegex": "/<conflict\\s*>\\s*<summary\\b[^>]*>\\s*(?:⚔️\\s*)?\\*\\*Conflict\\*\\*\\s*<\\/summary>\\s*<details\\b[^>]*>\\s*([\\s\\S]*?)\\s*<\\/details\\s*>\\s*<\\/conflict\\s*>/gim",
-                "replaceString": "<style>\n.dem-card{--dem-accent:#f38ba8;display:block;margin:0 0 12px;background:var(--SmartThemeBotMesBlurTintColor,rgba(30,30,46,.94));border:1px solid var(--SmartThemeBorderColor,#313244);border-left:3px solid var(--dem-accent);border-radius:8px;box-shadow:0 2px 10px var(--SmartThemeShadowColor,rgba(0,0,0,.25));box-sizing:border-box;overflow:hidden;font-family:var(--mainFontFamily,system-ui,sans-serif);font-size:.92em;color:var(--SmartThemeBodyColor,#cdd6f4);transition:box-shadow .2s ease,border-color .2s ease;}\n.dem-card>summary{list-style:none;cursor:pointer;padding:9px 12px;display:flex;align-items:center;gap:10px;transition:background .15s ease;}\n.dem-card>summary::-webkit-details-marker{display:none;}\n.dem-card>summary:focus-visible{outline:2px solid var(--dem-accent);outline-offset:-2px;}\n.dem-card__icon{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;flex:0 0 26px;background:color-mix(in srgb,var(--dem-accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--dem-accent) 30%,transparent);}\n.dem-card__title{font-weight:700;}\n.dem-card__tag{margin-left:auto;font-size:.68em;font-weight:700;text-transform:uppercase;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 62%,transparent);}\n.dem-card__caret{color:color-mix(in srgb,var(--dem-accent) 74%,var(--SmartThemeBodyColor,#cdd6f4));transition:transform .2s ease;font-size:.78em;}\n.dem-card[open]>summary .dem-card__caret{transform:rotate(90deg);}\n.dem-conflict-legacy>summary{border-bottom:1px solid var(--SmartThemeBorderColor,#313244);}\n.dem-conflict-legacy>p:not(:empty),.dem-conflict-legacy>ul,.dem-conflict-legacy>ol,.dem-conflict-legacy>blockquote{margin:0;padding:10px 12px;line-height:1.65;color:color-mix(in srgb,var(--SmartThemeBodyColor,#cdd6f4) 84%,transparent);overflow-wrap:anywhere;}\n.dem-conflict-legacy>p:empty{display:none;}\n@media (hover:hover){.dem-card:hover{box-shadow:0 4px 16px var(--SmartThemeShadowColor,rgba(0,0,0,.35));}.dem-card>summary:hover{background:color-mix(in srgb,var(--dem-accent) 7%,transparent);}}\n@media (max-width:420px){.dem-card__tag{display:none}.dem-conflict-legacy>p:not(:empty),.dem-conflict-legacy>ul,.dem-conflict-legacy>ol,.dem-conflict-legacy>blockquote{padding-inline:10px;}}\n@media (prefers-reduced-motion:reduce){.dem-card,.dem-card>summary,.dem-card__caret{transition:none;}}\n</style>\n<details class=\"dem-card dem-conflict dem-conflict-legacy\">\n  <summary><span class=\"dem-card__icon\">⚔️</span><span class=\"dem-card__title\">Conflict</span><span class=\"dem-card__tag\">Active</span><span class=\"dem-card__caret\">▸</span></summary>\n\n$1\n\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "66c3595e-0779-4dd6-a4d6-99af91469ede",
-                "scriptName": "DEM - UI module accents",
-                "findRegex": "/(?=<details(?:\\s+open)?\\s+class=\"dem-card\\s+dem-(?:cyoa|status|threads|conflict|momentum-engine)\">)/i",
-                "replaceString": "<style>.dem-card.dem-cyoa{--dem-accent:#fab387}.dem-card.dem-status{--dem-accent:#89b4fa}.dem-card.dem-threads{--dem-accent:#cba6f7}.dem-card.dem-conflict{--dem-accent:#f38ba8}.dem-card.dem-momentum-engine{--dem-accent:#f9e2af}.dem-status__more:has(.dem-status__offscene:empty){display:none}</style>\n",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "b1b0ea73-9450-4505-94d2-334f5467b422",
-                "scriptName": "DEM - [Current] tag appearance ",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Current\\]/gm",
-                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--current\">Current</span>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "c2fef43c-53b6-4700-9c4e-26d0f4527a18",
-                "scriptName": "DEM - [Unresolved] tag appearance",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Unresolved\\]/gm",
-                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--unresolved\">Unresolved</span>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "92afc933-3ee5-4b1c-81bb-0d4e5118e8f7",
-                "scriptName": "DEM - [Possible] tag appearance ",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Possible\\]/gm",
-                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--possible\">Possible</span>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "7d6b4f7b-539a-4d84-b03d-e2eb1c7c8f91",
-                "scriptName": "DEM - [Seed] tag appearance",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[Seed\\]/gm",
-                "replaceString": "• <span class=\"dem-thread-tag dem-thread-tag--seed\">Seed</span>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "c3703be8-98b3-4b9d-91b3-92e0852b5430",
-                "scriptName": "DEM - @Status UI - Char. w/ relationship",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[?\\s*([^|\\r\\n]+?)\\s*\\|\\s*Physical:\\s*([^|\\r\\n]*)\\s*\\|\\s*Clothes:\\s*([^|\\r\\n]*)\\s*\\|\\s*Mental:\\s*([^|\\r\\n]*)\\s*\\|\\s*Location:\\s*([^|\\r\\n]*)\\s*\\|\\s*Relationship(?:\\s*\\(mutual with [^)\\r\\n]+\\))?:\\s*\\[?\\s*((?:100|[1-9]?\\d)\\/100)\\s*\\]?\\s*-\\s*([^|\\r\\n]*)\\s*\\|\\s*Inventory:\\s*([^|\\]<\\r\\n]*)\\s*\\]?[ \\t]*(?=$|<\\/div>)/gim",
-                "replaceString": "<div class=\"dem-status-row\" style=\"display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;margin:0 0 6px;padding:8px 10px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;font-size:.9em;line-height:1.45;overflow-wrap:anywhere;\"><strong style=\"flex:1 0 100%;color:color-mix(in srgb,#cba6f7 74%,var(--SmartThemeBodyColor,#cdd6f4));\">$1</strong><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f38ba8 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Physical</span><span>$2</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Clothes</span><span>$3</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#a6e3a1 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Mental</span><span>$4</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#89b4fa 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Location</span><span>$5</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#fab387 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Relationship</span><span style=\"padding:0 5px;border-radius:4px;background:color-mix(in srgb,#fab387 14%,transparent);border:1px solid color-mix(in srgb,#fab387 28%,transparent);font-variant-numeric:tabular-nums;\">$6</span><span>$7</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#94e2d5 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Inventory</span><span>$8</span></span></div>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "9fff3360-9bb4-4fec-881e-8efe0e2e64b2",
-                "scriptName": "DEM - @Status UI - {{user}}",
-                "findRegex": "/(?:(?<=^)|(?<=>))[ \\t]*-\\s*\\[?\\s*([^|\\r\\n]+?)\\s*\\|\\s*(?:Physical:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Clothes:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Mental:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Location:\\s*)?([^|\\r\\n]*)\\s*\\|\\s*(?:Inventory:\\s*)?([^|\\]<\\r\\n]*)\\s*\\]?[ \\t]*(?=$|<\\/div>)/gim",
-                "replaceString": "<div class=\"dem-status-row\" style=\"display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 12px;margin:0 0 6px;padding:8px 10px;background:color-mix(in srgb,var(--SmartThemeBotMesBlurTintColor,rgba(24,24,37,.96)) 82%,var(--SmartThemeBodyColor,#cdd6f4) 5%);border:1px solid var(--SmartThemeBorderColor,#313244);border-radius:6px;font-size:.9em;line-height:1.45;overflow-wrap:anywhere;\"><strong style=\"flex:1 0 100%;color:color-mix(in srgb,#cba6f7 74%,var(--SmartThemeBodyColor,#cdd6f4));\">$1</strong><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f38ba8 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Physical</span><span>$2</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#f9e2af 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Clothes</span><span>$3</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#a6e3a1 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Mental</span><span>$4</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#89b4fa 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Location</span><span>$5</span></span><span style=\"display:inline-flex;flex-wrap:wrap;gap:4px;min-width:0;max-width:100%;\"><span style=\"color:color-mix(in srgb,#94e2d5 72%,var(--SmartThemeBodyColor,#cdd6f4));font-weight:700;\">Inventory</span><span>$6</span></span></div>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            }
-        ]
-    }
+    "request_image_resolution": ""
 }
