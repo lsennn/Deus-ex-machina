@@ -1,4 +1,4 @@
-<img width="2048" height="1152" alt="DEM cover" src="https://github.com/user-attachments/assets/fb1af29b-2c73-45bc-96dc-10b4b9647aa4" />
+<img width="2048" height="1152" alt="DEM cover" src="Assets/DEM cover.png" />
 
 
 # DEUS EX MACHINA
@@ -100,46 +100,32 @@ These four create the core pipeline of DEUS EX MACHINA. **TRUE THOUGHTS** inject
 
 True Thoughts and Status define fundamental character traits, Momentum Engine sets characters and events in motion, and Story Threads register unaddressed or possible events for later. Every module works together for the sake of storytelling.
 
-<figure>
-  <img width="1778" height="705" alt="1" src="https://github.com/user-attachments/assets/70c46b27-6d84-4104-a0da-87d5c5355804" />
-  <figcaption><em>Figure 1: GLM 5.2, default settings preset.</em></figcaption>
-</figure>
+*GLM 5.2, default settings preset.*
+<img width="1778" height="705" alt="1" src="Assets/1demo.png" />
 
-<figure>
-  <img width="1703" height="547" alt="2" src="https://github.com/user-attachments/assets/925700eb-a192-4350-a0d3-9cf86a15e831" />
-  <figcaption><em>Figure 2: CYOA.</em></figcaption>
-</figure>
+*CYOA.*
+<img width="1703" height="547" alt="2" src="Assets/2demo.png" />
 
-<figure>
-  <img width="1698" height="639" alt="3" src="https://github.com/user-attachments/assets/27cbece4-9097-4011-a44b-3730fdd5d2d7" />
-  <figcaption><em>Figure 3: Status and Story Threads.</em></figcaption>
-</figure>
+*Status and Story Threads.*
+<img width="1698" height="639" alt="3" src="Assets/3demo.png" />
 
-<figure>
-  <img width="1698" height="564" alt="4" src="https://github.com/user-attachments/assets/18ab72b0-d9fd-4475-94e0-a2aa8f7cfab1" />
-  <figcaption><em>Figure 4: Momentum Engine.</em></figcaption>
-</figure>
+*Momentum Engine.*
+<img width="1698" height="564" alt="4" src="Assets/4demo.png" />
 
-<figure>
-  <img width="1785" height="796" alt="5" src="https://github.com/user-attachments/assets/7083c410-4d01-4bac-aad0-8a98346f5490" />
-  <figcaption><em>Figure 5: GLM 5.2, third person {{user}} POV, asterisks, past-tense, Visual Storytelling, cinematic narration and heightened dialogue toggled on.</em></figcaption>
-</figure>
+*GLM 5.2, third person {{user}} POV, asterisks, past-tense, Visual Storytelling, dry narration and heightened dialogue toggled on.*
+<img width="1785" height="796" alt="5" src="Assets/5demo.png" />
 
-<figure>
-<img width="1690" height="446" alt="6" src="https://github.com/user-attachments/assets/8363e645-448c-433e-a7f8-d1c9fba8b879" />
-  <figcaption><em>Figure 6: Second version of Story Threads (when Conflict instead of Momentum Engine is toggled on) and Conflict.</em></figcaption>
-</figure>
+*Second version of Story Threads (when Conflict instead of Momentum Engine is toggled on) and Conflict.*
+<img width="1690" height="446" alt="6" src="Assets/6demo.png" />
 
-<figure>
-  <img width="1685" height="803" alt="8" src="https://github.com/user-attachments/assets/1c718f5e-feda-4e6d-9608-5b30f688159f" />
-  <figcaption><em>Figure 7: Claude Opus 4.6, dry narration, lean dialogue, visible True Thoughts and Visual Storytelling toggled on. Azure theme.</em></figcaption>
-</figure>
+*Claude Opus 4.6, dry narration, lean dialogue, visible True Thoughts and Visual Storytelling toggled on. Azure theme.*
+<img width="1685" height="803" alt="8" src="Assets/8demo.png" />
 
 ## Scaffolding Thinking
 
 For models that accept custom Chain-of-Thought, enabling ! Thinking ! greatly improves the output. You get more coherence, stricter rule-following, better prose quality, and more adherence to formatting. There are also a lot of creative-focused steps, so it’s not only a checklist but a tool to increase creativity as well! ! Thinking ! is completely dynamic and contextual. It only enables a reasoning section for the modules you have enabled, so the total token count can get really small or really dense. But even at its maximum, reasoning still finishes in under a minute, and even under 30s in most cases, because the whole stepped CoT is laser-focused on very specific points.
 
-<img width="1712" height="664" alt="7" src="https://github.com/user-attachments/assets/fc92e0d6-e453-4b56-ad0f-74a89d00b3f2" />
+<img width="1712" height="664" alt="7" src="Assets/7demo.png" />
 
 
 ## Model Quirks & Compatibility
