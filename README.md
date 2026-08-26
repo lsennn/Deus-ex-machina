@@ -186,7 +186,7 @@ To configure the wrapper:
    with:
 
    ```text
-   <summary>[Summary of past events: {{summary}}]</summary>
+   <past_events>[Summary of past events: {{summary}}]</past_events>
    ```
 
 ## License
