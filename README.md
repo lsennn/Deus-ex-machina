@@ -164,7 +164,7 @@ These four create the core pipeline of DEUS EX MACHINA. True Thoughts and Status
 Recommended models for this preset: Opus 4.6 (smartest; expensive; detailed prose); Gemini 3.7 Flash (smart; cheap; realistic characters); GLM 5.2 (smart; cheap; natural dialogue); DeepSeek V4 Pro 0813 (smart; cheap; balanced qualities); Gemma 4 31b (not very smart, but follows instructions really well; very cheap).
 ### Most models (that support disabling reasoning): Claude Opus 4.6, Kimi K2.5/2.6, Mimo V2.5 Pro, DeepSeek V4 Pro, DeepSeek V3.2, GLM 4.7, Gemma 4 31b, etc.
 
-- Samplers: temperature - 0.75-1.0 (Exceptions: Gemma 4 1.0, Opus 1.0. For the rest, start with 0.75, the default); Top K - 0.95 (default); rest - 1.0 or disabled (default; exceptions: Gemma 4 31b - Top K: 65)
+- Samplers: temperature - 0.75-1.0 (Exceptions: Gemma 4 1.0, Opus 1.0. For the rest, start with 0.75, the default); Top P - 0.95 (default); rest - 1.0 or disabled (default; exceptions: Gemma 4 31b - Top K: 65)
 - Post-processing: semi-strict 
 - Request model reasoning: off / not checked 
 - Reasoning effort: minimum 
@@ -184,25 +184,25 @@ Edit API -> Settings icon (top-right) -> Request body parameters -> add: `reason
 - Scene Reasoning: toggled on
 Provider-specific settings: the same as in the "most models" section above
 ### GLM 5.3 (Reasoning always on)
-- Samplers: temperature - 0.75 (default); Top K - 0.95 (default); rest - 1.0 or disabled (default)
+- Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: merge consecutive roles
 - Request model reasoning: on / checked 
 - Reasoning effort: minimum 
 - On the prompt list, go to the REASONING section, TOGGLE OFF ! Scene Reasoning ! and toggle on ! Thinking ! (FALLBACK)
 ### GLM 5.3 Flash (Reasoning always on)
-- Samplers: temperature - 0.75 (default); Top K - 0.95 (default); rest - 1.0 or disabled (default)
+- Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: merge consecutive roles
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
 - Scene Reasoning: toggled on
 ### Kimi K3 (Reasoning always on)
-- Samplers: temperature - 1.0; Top K - 0.95 (default); rest - 1.0 or disabled (default)
+- Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: semi-strict
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
 - Scene Reasoning: toggled on
 ### Gemini 3.1 Pro, 3.5-3.7 Flash (Reasoning always on)
-- Samplers: temperature - 1.0; Top K - 0.95 (default); rest - 1.0 or disabled (default)
+- Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: semi-strict
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); thinkingLevel: low on Additional Parameters -> Include Body (other OpenAI-compatible providers)
