@@ -168,7 +168,7 @@ Recommended models for this preset: Opus 4.6 (smartest; expensive; detailed pros
 - Post-processing: semi-strict 
 - Request model reasoning: off / not checked 
 - Reasoning effort: minimum 
-- Scene Reasoning: toggled on
+- Scene Plan: toggled on
 
 Provider-specific settings:
 If on NanoGPT - choose a non-thinking variant of the model, e.g., DeepSeek V4 Pro 0813 instead of DeepSeek V4 Pro 0813 Thinking
@@ -181,32 +181,32 @@ Edit API -> Settings icon (top-right) -> Request body parameters -> add: `reason
 - *Post-processing: merge consecutive roles*
 - Request model reasoning: off / not checked 
 - Reasoning effort: minimum 
-- Scene Reasoning: toggled on
+- Scene Plan: toggled on
 Provider-specific settings: the same as in the "most models" section above
 ### GLM 5.3 (Reasoning always on)
 - Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: merge consecutive roles
 - Request model reasoning: on / checked 
 - Reasoning effort: minimum 
-- On the prompt list, go to the REASONING section, TOGGLE OFF ! Scene Reasoning ! and toggle on ! Thinking ! (FALLBACK)
+- On the prompt list, go to the REASONING section, TOGGLE OFF ! Scene Plan ! and toggle on ! Thinking ! (FALLBACK)
 ### GLM 5.3 Flash (Reasoning always on)
 - Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: merge consecutive roles
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Reasoning: toggled on
+- Scene Plan: toggled on
 ### Kimi K3 (Reasoning always on)
 - Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: semi-strict
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Reasoning: toggled on
+- Scene Plan: toggled on
 ### Gemini 3.1 Pro, 3.5-3.7 Flash (Reasoning always on)
 - Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
 - Post-processing: semi-strict
 - Request model reasoning: on / checked 
 - Reasoning effort: low (OpenRouter); medium (NanoGPT); thinkingLevel: low on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Reasoning: toggled on
+- Scene Plan: toggled on
 
 ## Installation & Requirements
 ## Silly Tavern
