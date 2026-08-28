@@ -146,10 +146,10 @@ Here is a list of the models I’ve tested while creating the preset. It include
 | **MIXED: GLM 4.7 (NanoGPT subscription)** | 77/100 | Post-processing: Merge all consecutive roles<br>Samplers: temperature - 0.75, Top P - 0.95, rest default or disabled. | Quirks: Somewhat inconsistent. Sometimes fails to comply with instructions -- uncommon. | ! Thinking ! module: enabled |
 
 ## Installation & Requirements
-
+## Silly Tavern
 ### Requirements
 
-- SillyTavern **1.17.0 or newer.**
+- SillyTavern **1.18.0 or newer.**
 - Experimental macro engine enabled in Settings.
 - Preset regexes imported and enabled.
 
@@ -166,6 +166,37 @@ Here is a list of the models I’ve tested while creating the preset. It include
 
 > [!IMPORTANT]
 > The regexes are required. If you clicked **No**, re-import the preset and allow them.
+
+## Tavo
+### Requirements:
+- Latest version of Tavo recommended (supports SillyTavern-compatible presets, regex, HTML/CSS).
+- API connection set up (any OpenAI-compatible or supported provider).
+- Advanced Rendering enabled (required for full HTML/CSS rendering, including colored dialogue).
+- Theme configured with no text transformation (so HTML/CSS colored dialogue is not stripped or altered).
+
+**Installation and download:**
+1. Download [`DEUS EX MACHINA V1.json`](</DEUS EX MACHINA V1.json>) from the repository or the releases page.
+2. In Tavo, open the left sidebar (top-left icon) → **More** (bottom) → **Settings** → **Presets.**
+3. Tap **Create**, then **Import Preset** and select the downloaded `DEUS.EX.MACHINA.V2.json` file → Tap on it → Set as default.
+4. After import, select/enable the new preset in the current chat (right sidebar → Advanced Options → Presets.
+
+**Enable Advanced Rendering (required for HTML/CSS colored dialogue):**
+1. Open the main interface.
+2. Tap the top-left corner to open the left sidebar.
+3. Tap **More** at the bottom.
+4. Tap **Settings**.
+5. Tap **Advanced Rendering**.
+6. Toggle **Advanced Rendering** **ON**.
+
+This lets the chat page render standard HTML and CSS (including colored spans, styles, etc.).
+
+**Theme settings – no text transformation (allow HTML/CSS colored dialogue):**
+1. Open the left sidebar → **More** → **Themes**.
+2. Select your current theme (or copy an official theme to create a custom one).
+3. In the theme editor, go to Character message and disable **Tone highlight** and **Quote highlight.**
+4. Save/apply the theme and make sure it is active for the chat.
+
+Once Advanced Rendering is on and the theme has no text transformation, HTML/CSS-colored dialogue from the preset (or regex) will display properly.
 
 ## Summaryception Integration
 
