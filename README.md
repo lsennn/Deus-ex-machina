@@ -170,9 +170,9 @@ Recommended models for this preset: Opus 4.6 (smartest; expensive; detailed pros
 - Reasoning effort: minimum 
 - Scene Plan: toggled on
 
-Provider-specific settings:
-If on NanoGPT - choose a non-thinking variant of the model, e.g., DeepSeek V4 Pro 0813 instead of DeepSeek V4 Pro 0813 Thinking
-If on OpenRouter - if "request model reasoning" is not checked (it is not by default), reasoning will be disabled if the model supports it
+**Provider-specific settings:**
+If on **NanoGPT** - choose a non-thinking variant of the model, e.g., DeepSeek V4 Pro 0813 instead of DeepSeek V4 Pro 0813 Thinking
+If on **OpenRouter** - if "request model reasoning" is not checked (it is not by default), reasoning will be disabled if the model supports it
 If on another API provider: leave "request model reasoning" unchecked and set reasoning effort to minimum. If the model still reasons (even though non-reasoning is supported by that model), try going into Connection Profile settings (plug icon) -> scroll down to "Additional Parameters", on the same line as "cancel" and "connect" -> add: reasoning: { effort: 'none' }
 
 **If on Tavo:**
@@ -216,7 +216,7 @@ Provider-specific settings: the same as in the "most models" section above
 - Experimental macro engine enabled in Settings.
 - Preset regexes imported and enabled.
 
-### Install
+### Installation and download
 
 1. Download [`DEUS EX MACHINA V2 ST.json`](</DEUS EX MACHINA V2 ST.json>) from the repository or the releases page.
 2. In SillyTavern, click the plug icon on the top bar.
@@ -237,13 +237,13 @@ Provider-specific settings: the same as in the "most models" section above
 - Advanced Rendering enabled (required for full HTML/CSS rendering, including colored dialogue).
 - Theme configured with no text transformation (so HTML/CSS colored dialogue is not stripped or altered).
 
-**Installation and download:**
+### Installation and download
 1. Download [`DEUS EX MACHINA V2 Tavo.json`](</DEUS EX MACHINA V2 Tavo.json>) from the repository or the releases page.
 2. In Tavo, open the left sidebar (top-left icon) → **More** (bottom) → **Settings** → **Presets.**
 3. Tap **Create**, then **Import Preset** and select the downloaded `DEUS.EX.MACHINA.V2.json` file → Tap on it → Set as default.
 4. After import, select/enable the new preset in the current chat (right sidebar → Advanced Options → Presets.
 
-**Enable Advanced Rendering (required for HTML/CSS colored dialogue):**
+### Enable Advanced Rendering (required for HTML/CSS colored dialogue)
 1. Open the main interface.
 2. Tap the top-left corner to open the left sidebar.
 3. Tap **More** at the bottom.
@@ -253,7 +253,7 @@ Provider-specific settings: the same as in the "most models" section above
 
 This lets the chat page render standard HTML and CSS (including colored spans, styles, etc.).
 
-**Theme settings – no text transformation (allow HTML/CSS colored dialogue):**
+### Theme settings – no text transformation (allow HTML/CSS colored dialogue)
 1. Open the left sidebar → **More** → **Themes**.
 2. Select your current theme (or copy an official theme to create a custom one).
 3. In the theme editor, go to Character message and disable **Tone highlight** and **Quote highlight.**
