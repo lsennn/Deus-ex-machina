@@ -2107,7 +2107,7 @@
             "identifier": "f7e1c2d3-a4b5-46c7-89d0-e1f2a3b4c5d6",
             "system_prompt": true,
             "enabled": false,
-            "marker": true,
+            "marker": false,
             "name": "🔹🔹FORMATTING🔹🔹",
             "role": "system",
             "content": "<% if (getvar(\"narrative_styles\")) { %><% setvar(\"narrative_styles_checkpoint\", \"on\"); %><% } %><% -%>",
