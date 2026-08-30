@@ -218,7 +218,7 @@ Provider-specific settings: the same as in the "most models" section above
 
 ### Installation and download
 
-1. Download [`DEUS EX MACHINA V2 ST.json`](</DEUS EX MACHINA V2 ST.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V2.2 ST.json`](</DEUS EX MACHINA V2.2 ST.json>) from the repository or the releases page.
 2. In SillyTavern, click the plug icon on the top bar.
 3. Select **Chat Completion** under API.
 4. Setup your API if you haven't already.
@@ -238,7 +238,7 @@ Provider-specific settings: the same as in the "most models" section above
 - Theme configured with no text transformation (so HTML/CSS colored dialogue is not stripped or altered).
 
 ### Installation and download
-1. Download [`DEUS EX MACHINA V2 Tavo.json`](</DEUS EX MACHINA V2 Tavo.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V2.2 Tavo.json`](</DEUS EX MACHINA V2.2 Tavo.json>) from the repository or the releases page.
 2. In Tavo, open the left sidebar (top-left icon) → **More** (bottom) → **Settings** → **Presets.**
 3. Tap **Create**, then **Import Preset** and select the downloaded `DEUS.EX.MACHINA.V2.json` file → Tap on it → Set as default.
 4. After import, select/enable the new preset in the current chat (right sidebar → Advanced Options → Presets.
