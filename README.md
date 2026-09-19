@@ -43,6 +43,10 @@ That's why Scene Plan was created: to solve all of these issues. Scene Plan is a
 > [!IMPORTANT]
 > For most models, you have to disable native thinking/reasoning capabilities. For models where you can't disable thinking (Kimi K3, GPT 5.6, Gemini 3.1 Pro/3.5 Flash+, etc.), you have to lower the reasoning effort to the minimum possible, but still keep Scene Plan enabled. For GLM 5.3, you have to select `! Thinking ! (FALLBACK)` instead of Scene Plan in the REASONING section.
 
+### Fallback Thinking UI
+
+A full Scene Plan-like UI inside the reasoning block is used when Thinking (FALLBACK) is enabled. Exclusively tested with GLM 5.3, as it is currently the only model that requires the fallback enabled instead of the Scene Plan.  It's not support in Lumiverse as of now.
+
 ## Core
 
 Sets up the macro cleaner and the preset framing. Essential to keep enabled and in order, except for **System Policies**, which may be disabled if your model is already very dark-leaning and doesn’t send out refusals.
@@ -94,7 +98,7 @@ Narrative Styles change the atmosphere, feel, or vibes of the narrative. It won'
 
 ## Visuals
 
-**Dialogue Color** defines a color for each character and is enabled by default. **Visual Storytelling** creates HTML and CSS elements that help tell the story instead of just being fluff.
+**Dialogue Color** defines a color for each character and is enabled by default. **Visual Storytelling** creates HTML and CSS elements that help tell the story instead of just being fluff. **Expressive Dialogue:** adds CSS-animated dialogue tags according to characters' emotional states and actions. It also changes text capitalization, and font brightness, alongside other effects. It only activates for certain dialogue lines, not all of them. Some models, like GLM 5.3, use the tags frequently, while others rarely do.
 
 ## Formatting
 
@@ -113,6 +117,10 @@ Help steer the models away from annoying and story-damaging patterns: **Characte
 ### Psychological States
 
 Adds inner-state (internal conflict, perceptions, mind state) and motivation (immediate goal, purpose, action or inaction) fields to each major character.
+
+### Plotlines
+
+Adds a Plotlines module to the output that updates the main plot and subplot progression at each story phase. It acts as a hyper-summarizer to improve model consistency across a longer chat history and also serves as a visual reminder of the story progression so far.
 
 ## System Utility
 
@@ -159,54 +167,61 @@ These four create the core pipeline of DEUS EX MACHINA. True Thoughts and Status
 ## Model Setup
 
 > [!IMPORTANT]
-**The default settings of this preset *REQUIRE* reasoning to be either disabled or set to the lowest effort possible! Exceptions: GLM 5.3.**
+**The default settings of this preset** ***REQUIRE*** **reasoning to be either disabled or set to the lowest effort possible! Exception: GLM 5.3 (Fallback Thinking).**
 
-Recommended models for this preset: Opus 4.6 (smartest; expensive; detailed prose); Gemini 3.7 Flash (smart; cheap; realistic characters); GLM 5.2 (smart; cheap; natural dialogue); DeepSeek V4 Pro 0813 (smart; cheap; balanced qualities); Gemma 4 31b (not very smart, but follows instructions really well; very cheap).
-### Most models (that support disabling reasoning): Claude Opus 4.6, Kimi K2.5/2.6, Mimo V2.5 Pro, DeepSeek V4 Pro, DeepSeek V3.2, GLM 4.7, Gemma 4 31b, etc.
+**Recommended models for this preset:** Opus 4.6 (smartest; expensive; detailed prose); Gemini 3.7 Flash (smart; cheap; realistic characters); GLM 5.3 (smart; cheap; natural dialogue); DeepSeek V4 Pro 0813 (smart; cheap; balanced qualities); Gemma 4 31b (not very smart, but follows instructions really well; very cheap).
+ 
+**For most models (that support disabling reasoning):** Claude Opus 4.6, Kimi K2.5/2.6, Mimo V2.5 Pro, DeepSeek V4 Pro, DeepSeek V3.2, GLM 4.7, Gemma 4 31b, etc.
 
-- Samplers: temperature - 0.75-1.0 (Exceptions: Gemma 4 1.0, Opus 1.0. For the rest, start with 0.75, the default); Top P - 0.95 (default); rest - 1.0 or disabled (default; exceptions: Gemma 4 31b - Top K: 65)
-- Post-processing: semi-strict 
-- Request model reasoning: off / not checked 
-- Reasoning effort: minimum 
-- Scene Plan: toggled on
+* **Samplers:** temperature - 0.75-1.0 (Exceptions: Gemma 4 1.0, Opus 1.0. For the rest, start with 0.75, the default); Top P - 0.95 (default); rest - 1.0 or disabled (default; exceptions: Gemma 4 31b - Top K: 65)
+* **Post-processing:** semi-strict
+* **Request model reasoning:** off / not checked
+* **Reasoning effort:** minimum/none
+* **Scene Plan:** toggled on
 
-**Provider-specific settings:**
-If on **NanoGPT** - choose a non-thinking variant of the model, e.g., DeepSeek V4 Pro 0813 instead of DeepSeek V4 Pro 0813 Thinking
-If on **OpenRouter** - if "request model reasoning" is not checked (it is not by default), reasoning will be disabled if the model supports it
-If on another API provider: leave "request model reasoning" unchecked and set reasoning effort to minimum. If the model still reasons (even though non-reasoning is supported by that model), try going into Connection Profile settings (plug icon) -> scroll down to "Additional Parameters", on the same line as "cancel" and "connect" -> add: reasoning: { effort: 'none' }
+**Provider-specific settings:** 
+If on **NanoGPT**: choose a non-thinking variant of the model, e.g., DeepSeek V4 Pro 0813 instead of DeepSeek V4 Pro 0813 Thinking. 
+If on **OpenRouter**: if "request model reasoning" is not checked (it is not by default), reasoning will be disabled if the model supports it. 
+If on another API provider: leave "request model reasoning" unchecked and set reasoning effort to minimum. If the model still reasons (even though non-reasoning is supported by that model), try going into Connection Profile settings (plug icon) -> scroll down to "Additional Parameters", on the same line as "cancel" and "connect" -> add: `reasoning: { effort: 'none' }`
 
-**If on Tavo:**
-Edit API -> Settings icon (top-right) -> Request body parameters -> add: `reasoning: { effort: 'none' }` or add: `reasoning: { effort: 'low' }` if the model has reasoning always on (see list below).
-### GLM 5.2
-- *Post-processing: merge consecutive roles*
-- Request model reasoning: off / not checked 
-- Reasoning effort: minimum 
-- Scene Plan: toggled on
-Provider-specific settings: the same as in the "most models" section above
-### GLM 5.3 (Reasoning always on)
-- Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
-- Post-processing: merge consecutive roles
-- Request model reasoning: on / checked 
-- Reasoning effort: minimum 
-- On the prompt list, go to the REASONING section, TOGGLE OFF ! Scene Plan ! and toggle on ! Thinking ! (FALLBACK)
-### GLM 5.3 Flash (Reasoning always on)
-- Samplers: temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
-- Post-processing: merge consecutive roles
-- Request model reasoning: on / checked 
-- Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Plan: toggled on
-### Kimi K3 (Reasoning always on)
-- Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
-- Post-processing: semi-strict
-- Request model reasoning: on / checked 
-- Reasoning effort: low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Plan: toggled on
-### Gemini 3.1 Pro, 3.5-3.7 Flash (Reasoning always on)
-- Samplers: temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
-- Post-processing: semi-strict
-- Request model reasoning: on / checked 
-- Reasoning effort: low (OpenRouter); medium (NanoGPT); thinkingLevel: low on Additional Parameters -> Include Body (other OpenAI-compatible providers)
-- Scene Plan: toggled on
+**Tavo-specific:** Edit API -> Settings icon (top-right) -> Request body parameters -> add: `reasoning: { effort: 'none' }` or add: `reasoning: { effort: 'low' }` if the model has reasoning always on (see list below).
+
+**Lumiverse-specific:**  leave "request model reasoning" unchecked and set reasoning effort to none. If the model still reasons (even though non-reasoning is supported by that model), try going into Reasoning/CoT in the menu -> "Custom Body" -> add: `reasoning: { effort: 'none' }`
+# GLM 5.2
+
+* **Post-processing:** merge consecutive roles
+* **Request model reasoning:** off / not checked
+* **Reasoning effort:** minimum/none
+* **Scene Plan:** toggled on 
+* **Provider-specific settings:** the same as in the "most models" section above
+# GLM 5.3 (Reasoning always on)
+
+* **Samplers:** temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
+* **Post-processing:** merge consecutive roles
+* **Request model reasoning:** on / checked
+* **Reasoning effort:** low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
+* ⚠️ **Reasoning options: on the prompt list, go to the REASONING section, TOGGLE OFF ! Scene Plan ! and toggle on ! Thinking ! (FALLBACK)**
+# GLM 5.3 Flash (Reasoning always on)
+
+* **Samplers:** temperature - 0.75 (default); Top P - 0.95 (default); rest - 1.0 or disabled (default)
+* **Post-processing:** merge consecutive roles
+* **Request model reasoning:** on / checked
+* **Reasoning effort:** low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
+* **Scene Plan:** toggled on
+# Kimi K3 (Reasoning always on)
+
+* **Samplers:** temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
+* **Post-processing:** semi-strict
+* **Request model reasoning:** on / checked
+* **Reasoning effort:** low (OpenRouter); medium (NanoGPT); reasoning: { effort: 'low' } on Additional Parameters -> Include Body (other OpenAI-compatible providers)
+* **Scene Plan:** toggled on
+# Gemini 3.1 Pro, 3.5-3.8 Flash (Reasoning always on)
+
+* **Samplers:** temperature - 1.0; Top P - 0.95 (default); rest - 1.0 or disabled (default)
+* **Post-processing:** semi-strict
+* **Request model reasoning:** on / checked
+* **Reasoning effort:** low (OpenRouter); medium (NanoGPT); thinkingLevel: low on Additional Parameters -> Include Body (other OpenAI-compatible providers)
+* **Scene Plan:** toggled on
 
 ## Installation & Requirements
 ## Silly Tavern
@@ -218,7 +233,7 @@ Provider-specific settings: the same as in the "most models" section above
 
 ### Installation and download
 
-1. Download [`DEUS EX MACHINA V2.3 ST.json`](</DEUS EX MACHINA V2.3 ST.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V2.5 ST.json`](</DEUS EX MACHINA V2.5 ST.json>) from the repository or the releases page.
 2. In SillyTavern, click the plug icon on the top bar.
 3. Select **Chat Completion** under API.
 4. Setup your API if you haven't already.
@@ -236,9 +251,10 @@ Provider-specific settings: the same as in the "most models" section above
 - API connection set up (any OpenAI-compatible or supported provider).
 - Advanced Rendering enabled (required for full HTML/CSS rendering, including colored dialogue).
 - Theme configured with no text transformation (so HTML/CSS colored dialogue is not stripped or altered).
+- **Preset regexes imported and enabled.**
 
 ### Installation and download
-1. Download [`DEUS EX MACHINA V2.3 Tavo.json`](</DEUS EX MACHINA V2.3 Tavo.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V2.5 Tavo.json`](</DEUS EX MACHINA V2.5 Tavo.json>) from the repository or the releases page.
 2. In Tavo, open the left sidebar (top-left icon) → **More** (bottom) → **Settings** → **Presets.**
 3. Tap **Create**, then **Import Preset** and select the downloaded `DEUS.EX.MACHINA.V2.json` file → Tap on it → Set as default.
 4. After import, select/enable the new preset in the current chat (right sidebar → Advanced Options → Presets.
@@ -261,9 +277,25 @@ This lets the chat page render standard HTML and CSS (including colored spans, s
 
 Once Advanced Rendering is on and the theme has no text transformation, HTML/CSS-colored dialogue from the preset (or regex) will display properly.
 
+## Lumiverse
+### Requirements:
+
+* Lumiverse **v1.2.0+**
+* **Preset regexes imported and enabled.**
+
+### Installation and download
+1. Download [`DEUS EX MACHINA V2.5 Lumiverse.json`](</DEUS EX MACHINA V2.5 Lumiverse.json>) from the repository or the releases page.
+2. In Lumiverse, click on Loom.
+3. On the top right bar, click on the three dots.
+4. Select Import Loom JSON and import the preset.
+
+> [!IMPORTANT]
+> If you're in a chat that already has many DEM modules across several messages in the output, go back to the home screen before importing the preset to avoid performance issues. 
+
+
 ## Summaryception Integration
 
-If you use [Summaryception](https://github.com/Lodactio/Extension-Summaryception), pair it with the DEM Summaryception preset from the repository or releases page. It includes XML tags and focuses only on content inside `<prose>`.
+If you use [Summaryception](https://github.com/Lodactio/Extension-Summaryception), (SillyTavern extension)  pair it with the DEM Summaryception preset from the repository or releases page. It includes XML tags and focuses only on content inside `<prose>`.
 
 To configure the wrapper:
 
@@ -271,17 +303,7 @@ To configure the wrapper:
 2. Open **Advanced settings**.
 3. Scroll to **Summarizer Prompts** and import [`DEM Summaryception custom prompt`](/DEM-Summaryception-custom-prompt.txt)
 4. Scroll to **Injection Wrapper Template**.
-5. Replace:
-
-   ```text
-   [Summary of past events: {{summary}}]
-   ```
-
-   with:
-
-   ```text
-   <past_events>[Summary of past events: {{summary}}]</past_events>
-   ```
+5. Add XML tags: Wrap the contents of the injection wrapper template in `<past_events>` XML tags, example: `<past_events>[Summary of past events: {{summary}}]</past_events>`
 
 ## License
 
