@@ -146,8 +146,11 @@ These four create the core pipeline of DEUS EX MACHINA. True Thoughts and Status
 
 ## Screenshots
 
-*GLM 5.3, Scene Plan.*
+*GLM 5.3, Fallback Thinking.*
 <img width="1778" height="705" alt="1" src="assets/2.5.demo1.png" />
+
+*DeepSeek V4 Pro 0813, Scene Plan.*
+<img width="1778" height="705" alt="1" src="assets/V2 7demo.png" />
 
 *GLM 5.3, Visual Storytelling toggled on.*
 <img width="1778" height="705" alt="1" src="assets/2.5.demo2.png" />
