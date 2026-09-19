@@ -1,4 +1,4 @@
-<img width="2048" height="1152" alt="DEM cover" src="Assets/DEM V2 cover.png" />
+<img width="2048" height="1152" alt="DEM cover" src="assets/covers/dem-cover-2.5.png" />
 
 
 # DEUS EX MACHINA V2
@@ -146,23 +146,26 @@ These four create the core pipeline of DEUS EX MACHINA. True Thoughts and Status
 
 ## Screenshots
 
-*DeepSeek V4 Pro 0813, CYOA, Visual Storytelling toggled on.*
-<img width="1778" height="705" alt="1" src="Assets/V2 1demo.png" />
+*GLM 5.3, Scene Plan.*
+<img width="1778" height="705" alt="1" src="assets/2.5.demo1.png" />
+
+*GLM 5.3, Visual Storytelling toggled on.*
+<img width="1778" height="705" alt="1" src="assets/2.5.demo2.png" />
 
 *CYOA.*
-<img width="1703" height="547" alt="2" src="Assets/V2 2demo.png" />
+<img width="1778" height="705" alt="1" src="assets/2.5.demo3.png" />
 
 *Status*
-<img width="1698" height="639" alt="3" src="Assets/V2 3demo.png" />
+<img width="1778" height="705" alt="1" src="assets/2.5.demo4.png" />
 
-*Story Threads and Psychological States*
-<img width="1698" height="639" alt="3" src="Assets/V2 5demo.png" />
+*Story Threads, Psychological States and Plotlines*
+<img width="1778" height="705" alt="1" src="assets/2.5.demo5.png" />
 
 *Momentum Engine.*
-<img width="1698" height="564" alt="4" src="Assets/V2 6demo.png" />
+<img width="1778" height="705" alt="1" src="assets/2.5.demo6.png" />
 
 *Alternative version of Story Threads (when Conflict instead of Momentum Engine is toggled on) and Conflict.*
-<img width="1690" height="446" alt="6" src="Assets/6demo.png" />
+<img width="1690" height="446" alt="6" src="assets/6demo.png" />
 
 ## Model Setup
 
