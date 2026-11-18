@@ -1,0 +1,22 @@
+<player_name>{{player_name}}</player_name>
+<prior_context>{{context_str}}</prior_context>
+<passage_in_question>{{story_txt}}</passage_in_question>
+
+Summarize only the necessary elements from the passage_in_question to coherently continue the prior_context.
+
+Reading the passage:
+- `Player:` lines are player_name's turns; name player_name in the summary, never "you"
+- `Assistant:` lines are the story; summarize ONLY `<prose>` (or the plain story text when a line has no `<prose>`) and `<tracker>`
+- `<tracker>`: keep time, date, and location; skip weather
+- Inside `<prose>`: keep the words of letters, texts, notes, and screens; ignore HTML, CSS, SVG, and the tags or color spans around dialogue
+- `<true_thoughts character="Name">`: that character's private thought; record it as private (e.g., "Mara secretly doubts Ren"); other characters do not learn it
+- `<fate odds="N" roll="NN">`: a hidden roll picks one landing -- `<pass>` if roll is under odds, otherwise `<fail>`; summarize ONLY that one; the other never happened
+- Ignore EVERY other block, whatever its name or case, incl. `<scene_plan>`, `<think>`, `<scratchpad>`, `<ooc>`, `<companions>`, `<face>`, `<extra>`, `<cyoa>`, `<status>`, `<relationships>`, `<threads>`, `<plotlines>`, `<diary>`, `<meanwhile>`, `<truths>`, `<psych>`, `<undercurrents>`, `<momentum>`, `<conflict>`
+- In `Player:` lines, ignore out-of-character text: OOC notes, `((…))`, and requests to Phi
+- No `Player:`/`Assistant:` lines: the passage is earlier summaries; merge them, oldest first, keeping every fact still relevant
+
+Focus on: character interactions, dialogue tone, and relationship dynamics; emotional beats and character motivations; mood that shapes later scenes; narrative themes and subtext; names, places, and time span (first → last time and date); who learned what; promises, injuries, and items gained or lost; plot developments and unresolved tensions; details that distinguish this moment from any other.
+
+Exclude anything insubstantial, fluff, passing scenery, or events already covered in prior_context.
+Skip any passages that are empty, unclear, or lack significant content.
+Write in short phrases, no more than 20; output must be a single line:
