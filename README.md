@@ -7,6 +7,9 @@ DEUS EX MACHINA (DEM) is a prompt preset for [SillyTavern](https://github.com/Si
 
 V4 adds **Fate**, hidden dice that decide your risky actions, plus **Diaries**, **New Faces** character cards with **Pinned Cards**, a **Gore & Violence** pick, **Dark Portrayals**, and replies that repair their own broken formatting.
 
+> [!TIP]
+> **DEM has its own site: [lsennn.github.io/deus-ex-machina](https://lsennn.github.io/deus-ex-machina/).** It has the [downloads](https://lsennn.github.io/deus-ex-machina/#preset), the setup for [your model](https://lsennn.github.io/deus-ex-machina/#your-model), [every module](https://lsennn.github.io/deus-ex-machina/#modules), [sample replies](https://lsennn.github.io/deus-ex-machina/#one-scene), installation for each host, and the [release notes](https://lsennn.github.io/deus-ex-machina/changes.html) of every version.
+
 ## Contents
 
 - [What's New in V4](#whats-new-in-v4)
@@ -349,6 +352,8 @@ These four create the core pipeline of DEUS EX MACHINA. True Thoughts and Status
 
 ## Model Setup
 
+The same setup is on the site, under [Your model](https://lsennn.github.io/deus-ex-machina/#your-model).
+
 > [!IMPORTANT]
 **The default settings of this preset** ***REQUIRE*** **reasoning to be either disabled or set to the lowest effort possible! Exceptions: GLM 5.3 (reasoning always on, low; keep Scene Plan) and Gemini 4 Argon (Thinking FALLBACK).**
 
@@ -436,7 +441,7 @@ If on another API provider: leave "request model reasoning" unchecked and set re
 
 ### Installation and download
 
-1. Download [`DEUS EX MACHINA V4 ST.json`](</DEUS EX MACHINA V4 ST.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V4 ST.json`](</DEUS EX MACHINA V4 ST.json>) from the repository or the [releases page](https://github.com/lsennn/Deus-ex-machina/releases/tag/v4.0).
 2. In SillyTavern, click the plug icon on the top bar.
 3. Select **Chat Completion** under API.
 4. Set up your API if you haven't already.
@@ -448,7 +453,7 @@ If on another API provider: leave "request model reasoning" unchecked and set re
 > [!IMPORTANT]
 > The regexes are required. If you clicked **No**, re-import the preset and allow them.
 
-The regexes are also available on their own as [`DEUS EX MACHINA V4 ST - Regex.json`](</Regex/DEUS EX MACHINA V4 ST - Regex.json>) (SillyTavern: Extensions > Regex > Import), if you want them without the preset.
+The regexes are also available on their own as [`DEUS EX MACHINA V4 ST - Regex.json`](</DEUS EX MACHINA V4 ST - Regex.json>) (SillyTavern: Extensions > Regex > Import), if you want them without the preset.
 
 ## Tavo
 ### Requirements:
@@ -459,7 +464,7 @@ The regexes are also available on their own as [`DEUS EX MACHINA V4 ST - Regex.j
 - **Preset regexes imported and enabled.**
 
 ### Installation and download
-1. Download [`DEUS EX MACHINA V4 Tavo.json`](</DEUS EX MACHINA V4 Tavo.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V4 Tavo.json`](</DEUS EX MACHINA V4 Tavo.json>) from the repository or the [releases page](https://github.com/lsennn/Deus-ex-machina/releases/tag/v4.0).
 2. In Tavo, open the left sidebar (top-left icon) → **More** (bottom) → **Settings** → **Presets.**
 3. Tap **Create**, then **Import Preset** and select the downloaded `DEUS EX MACHINA V4 Tavo.json` file → Tap on it → Set as default.
 4. After import, select/enable the new preset in the current chat (right sidebar → Advanced Options → Presets).
@@ -489,7 +494,7 @@ Once Advanced Rendering is on and the theme has no text transformation, HTML/CSS
 * **Preset regexes imported and enabled.**
 
 ### Installation and download
-1. Download [`DEUS EX MACHINA V4 Lumiverse.json`](</DEUS EX MACHINA V4 Lumiverse.json>) from the repository or the releases page.
+1. Download [`DEUS EX MACHINA V4 Lumiverse.json`](</DEUS EX MACHINA V4 Lumiverse.json>) from the repository or the [releases page](https://github.com/lsennn/Deus-ex-machina/releases/tag/v4.0). It's also on [Illarin](https://illarin.com/a/b38b3e23-dc28-4c01-b520-94cb27371dda/deus-ex-machina-v4-lumiverse), a platform for publishing presets, where the site's Lumiverse download comes from.
 2. In Lumiverse, click on Loom.
 3. On the top right bar, click on the three dots.
 4. Select Import Loom JSON and import the preset.
@@ -504,7 +509,7 @@ V1, V2, V2.5 and V3 are in their own folders ([`V1/`](V1), [`V2/`](V2), [`V2.5/`
 
 ## Summaryception Integration
 
-If you use [Summaryception](https://github.com/Lodactio/Extension-Summaryception) (SillyTavern extension), pair it with the DEM Summaryception prompt from the repository or releases page. It's rewritten for every V4 module: it keeps your turns, summarizes only the story and the Tracker, and focuses only on content inside `<prose>`.
+If you use [Summaryception](https://github.com/Lodactio/Extension-Summaryception) (SillyTavern extension), pair it with the DEM Summaryception prompt from the repository or the [releases page](https://github.com/lsennn/Deus-ex-machina/releases/tag/v4.0). It's rewritten for every V4 module: it keeps your turns, summarizes only the story and the Tracker, and focuses only on content inside `<prose>`.
 
 To configure the wrapper:
 
